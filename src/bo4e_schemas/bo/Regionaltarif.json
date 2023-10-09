@@ -25,7 +25,7 @@
                             "type": "null"
                         }
                     ],
-                    "default": "0.6.1rc3",
+                    "default": "0.6.1rc6",
                     "title": " Version"
                 },
                 "adresszusatz": {
@@ -198,7 +198,7 @@
                             "type": "null"
                         }
                     ],
-                    "default": "0.6.1rc3",
+                    "default": "0.6.1rc6",
                     "title": " Version"
                 },
                 "anteilProzent": {
@@ -256,7 +256,7 @@
                             "type": "null"
                         }
                     ],
-                    "default": "0.6.1rc3",
+                    "default": "0.6.1rc6",
                     "title": " Version"
                 },
                 "anteil": {
@@ -467,7 +467,7 @@
                             "type": "null"
                         }
                     ],
-                    "default": "0.6.1rc3",
+                    "default": "0.6.1rc6",
                     "title": " Version"
                 },
                 "exRefName": {
@@ -523,7 +523,7 @@
                             "type": "null"
                         }
                     ],
-                    "default": "0.6.1rc3",
+                    "default": "0.6.1rc6",
                     "title": " Version"
                 },
                 "geraeteeigenschaften": {
@@ -578,7 +578,7 @@
                             "type": "null"
                         }
                     ],
-                    "default": "0.6.1rc3",
+                    "default": "0.6.1rc6",
                     "title": " Version"
                 },
                 "geraetemerkmal": {
@@ -763,7 +763,7 @@
                             "type": "null"
                         }
                     ],
-                    "default": "0.6.1rc3",
+                    "default": "0.6.1rc6",
                     "title": " Version"
                 },
                 "kriterium": {
@@ -1128,7 +1128,7 @@
                             "type": "null"
                         }
                     ],
-                    "default": "0.6.1rc3",
+                    "default": "0.6.1rc6",
                     "title": " Version"
                 },
                 "amtsgericht": {
@@ -1404,7 +1404,7 @@
                             "type": "null"
                         }
                     ],
-                    "default": "0.6.1rc3",
+                    "default": "0.6.1rc6",
                     "title": " Version"
                 },
                 "einheit": {
@@ -1557,7 +1557,7 @@
                             "type": "null"
                         }
                     ],
-                    "default": "0.6.1rc3",
+                    "default": "0.6.1rc6",
                     "title": " Version"
                 },
                 "bezugswert": {
@@ -1637,7 +1637,7 @@
                             "type": "null"
                         }
                     ],
-                    "default": "0.6.1rc3",
+                    "default": "0.6.1rc6",
                     "title": " Version"
                 },
                 "beschreibung": {
@@ -1740,7 +1740,7 @@
                             "type": "null"
                         }
                     ],
-                    "default": "0.6.1rc3",
+                    "default": "0.6.1rc6",
                     "title": " Version"
                 },
                 "gueltigkeitstyp": {
@@ -1798,7 +1798,7 @@
                             "type": "null"
                         }
                     ],
-                    "default": "0.6.1rc3",
+                    "default": "0.6.1rc6",
                     "title": " Version"
                 },
                 "beschreibung": {
@@ -1875,7 +1875,7 @@
                             "type": "null"
                         }
                     ],
-                    "default": "0.6.1rc3",
+                    "default": "0.6.1rc6",
                     "title": " Version"
                 },
                 "einheitspreis": {
@@ -1974,7 +1974,7 @@
                             "type": "null"
                         }
                     ],
-                    "default": "0.6.1rc3",
+                    "default": "0.6.1rc6",
                     "title": " Version"
                 },
                 "bezugseinheit": {
@@ -2065,7 +2065,7 @@
                             "type": "null"
                         }
                     ],
-                    "default": "0.6.1rc3",
+                    "default": "0.6.1rc6",
                     "title": " Version"
                 },
                 "aufAbschlagstyp": {
@@ -2348,7 +2348,7 @@
                             "type": "null"
                         }
                     ],
-                    "default": "0.6.1rc3",
+                    "default": "0.6.1rc6",
                     "title": " Version"
                 }
             },
@@ -2406,7 +2406,7 @@
                             "type": "null"
                         }
                     ],
-                    "default": "0.6.1rc3",
+                    "default": "0.6.1rc6",
                     "title": " Version"
                 },
                 "berechnungsmethode": {
@@ -2562,7 +2562,7 @@
                             "type": "null"
                         }
                     ],
-                    "default": "0.6.1rc3",
+                    "default": "0.6.1rc6",
                     "title": " Version"
                 },
                 "einschraenkungleistung": {
@@ -2682,7 +2682,7 @@
                             "type": "null"
                         }
                     ],
-                    "default": "0.6.1rc3",
+                    "default": "0.6.1rc6",
                     "title": " Version"
                 },
                 "beschreibung": {
@@ -2848,7 +2848,7 @@
                             "type": "null"
                         }
                     ],
-                    "default": "0.6.1rc3",
+                    "default": "0.6.1rc6",
                     "title": " Version"
                 },
                 "abschlagszyklus": {
@@ -3023,7 +3023,7 @@
                             "type": "null"
                         }
                     ],
-                    "default": "0.6.1rc3",
+                    "default": "0.6.1rc6",
                     "title": " Version"
                 },
                 "dauer": {
@@ -3144,7 +3144,7 @@
                     "type": "null"
                 }
             ],
-            "default": "0.6.1rc3",
+            "default": "0.6.1rc6",
             "title": " Version"
         },
         "anbieter": {

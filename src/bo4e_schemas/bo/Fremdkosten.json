@@ -25,7 +25,7 @@
                             "type": "null"
                         }
                     ],
-                    "default": "0.6.1rc3",
+                    "default": "0.6.1rc6",
                     "title": " Version"
                 },
                 "waehrung": {
@@ -83,7 +83,7 @@
                             "type": "null"
                         }
                     ],
-                    "default": "0.6.1rc3",
+                    "default": "0.6.1rc6",
                     "title": " Version"
                 },
                 "exRefName": {
@@ -139,7 +139,7 @@
                             "type": "null"
                         }
                     ],
-                    "default": "0.6.1rc3",
+                    "default": "0.6.1rc6",
                     "title": " Version"
                 },
                 "kostenblockbezeichnung": {
@@ -209,7 +209,7 @@
                             "type": "null"
                         }
                     ],
-                    "default": "0.6.1rc3",
+                    "default": "0.6.1rc6",
                     "title": " Version"
                 },
                 "artikelbezeichnung": {
@@ -395,7 +395,7 @@
                             "type": "null"
                         }
                     ],
-                    "default": "0.6.1rc3",
+                    "default": "0.6.1rc6",
                     "title": " Version"
                 },
                 "einheit": {
@@ -474,7 +474,7 @@
                             "type": "null"
                         }
                     ],
-                    "default": "0.6.1rc3",
+                    "default": "0.6.1rc6",
                     "title": " Version"
                 },
                 "bezugswert": {
@@ -818,7 +818,7 @@
                             "type": "null"
                         }
                     ],
-                    "default": "0.6.1rc3",
+                    "default": "0.6.1rc6",
                     "title": " Version"
                 },
                 "dauer": {
@@ -939,7 +939,7 @@
                     "type": "null"
                 }
             ],
-            "default": "0.6.1rc3",
+            "default": "0.6.1rc6",
             "title": " Version"
         },
         "externeReferenzen": {

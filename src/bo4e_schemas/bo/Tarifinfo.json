@@ -25,7 +25,7 @@
                             "type": "null"
                         }
                     ],
-                    "default": "0.6.1rc3",
+                    "default": "0.6.1rc6",
                     "title": " Version"
                 },
                 "adresszusatz": {
@@ -176,7 +176,7 @@
                             "type": "null"
                         }
                     ],
-                    "default": "0.6.1rc3",
+                    "default": "0.6.1rc6",
                     "title": " Version"
                 },
                 "anteilProzent": {
@@ -234,7 +234,7 @@
                             "type": "null"
                         }
                     ],
-                    "default": "0.6.1rc3",
+                    "default": "0.6.1rc6",
                     "title": " Version"
                 },
                 "anteil": {
@@ -445,7 +445,7 @@
                             "type": "null"
                         }
                     ],
-                    "default": "0.6.1rc3",
+                    "default": "0.6.1rc6",
                     "title": " Version"
                 },
                 "exRefName": {
@@ -835,7 +835,7 @@
                             "type": "null"
                         }
                     ],
-                    "default": "0.6.1rc3",
+                    "default": "0.6.1rc6",
                     "title": " Version"
                 },
                 "amtsgericht": {
@@ -1257,7 +1257,7 @@
                             "type": "null"
                         }
                     ],
-                    "default": "0.6.1rc3",
+                    "default": "0.6.1rc6",
                     "title": " Version"
                 },
                 "abschlagszyklus": {
@@ -1377,7 +1377,7 @@
                             "type": "null"
                         }
                     ],
-                    "default": "0.6.1rc3",
+                    "default": "0.6.1rc6",
                     "title": " Version"
                 },
                 "dauer": {
@@ -1498,7 +1498,7 @@
                     "type": "null"
                 }
             ],
-            "default": "0.6.1rc3",
+            "default": "0.6.1rc6",
             "title": " Version"
         },
         "anbieter": {

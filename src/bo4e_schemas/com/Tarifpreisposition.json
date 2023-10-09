@@ -46,7 +46,7 @@
                             "type": "null"
                         }
                     ],
-                    "default": "0.6.1rc3",
+                    "default": "0.6.1rc6",
                     "title": " Version"
                 },
                 "einheitspreis": {
@@ -211,7 +211,7 @@
                             "type": "null"
                         }
                     ],
-                    "default": "0.6.1rc3",
+                    "default": "0.6.1rc6",
                     "title": " Version"
                 }
             },
@@ -252,7 +252,7 @@
                     "type": "null"
                 }
             ],
-            "default": "0.6.1rc3",
+            "default": "0.6.1rc6",
             "title": " Version"
         },
         "bezugseinheit": {

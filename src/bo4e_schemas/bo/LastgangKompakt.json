@@ -25,7 +25,7 @@
                             "type": "null"
                         }
                     ],
-                    "default": "0.6.1rc3",
+                    "default": "0.6.1rc6",
                     "title": " Version"
                 },
                 "exRefName": {
@@ -177,7 +177,7 @@
                             "type": "null"
                         }
                     ],
-                    "default": "0.6.1rc3",
+                    "default": "0.6.1rc6",
                     "title": " Version"
                 },
                 "tag": {
@@ -294,7 +294,7 @@
                             "type": "null"
                         }
                     ],
-                    "default": "0.6.1rc3",
+                    "default": "0.6.1rc6",
                     "title": " Version"
                 },
                 "wert": {
@@ -349,7 +349,7 @@
                             "type": "null"
                         }
                     ],
-                    "default": "0.6.1rc3",
+                    "default": "0.6.1rc6",
                     "title": " Version"
                 },
                 "status": {
