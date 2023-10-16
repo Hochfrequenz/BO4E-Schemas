@@ -17,7 +17,7 @@
         "_typ": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/test_generation/src/bo4e_schemas/enum/Typ.json#"
+                    "$ref": "../enum/Typ.json#"
                 },
                 {
                     "type": "null"
@@ -41,7 +41,7 @@
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/test_generation/src/bo4e_schemas/com/ExterneReferenz.json#"
+                        "$ref": "../com/ExterneReferenz.json#"
                     },
                     "type": "array"
                 },
