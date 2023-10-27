@@ -23,7 +23,7 @@
                     "type": "null"
                 }
             ],
-            "default": "0.6.1rc9",
+            "default": "0.6.1rc10",
             "title": " Version"
         },
         "artikelbezeichnung": {
@@ -53,7 +53,7 @@
         "betragKostenposition": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc9/src/bo4e_schemas/com/Betrag.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc10/src/bo4e_schemas/com/Betrag.json"
                 },
                 {
                     "type": "null"
@@ -77,7 +77,7 @@
         "einzelpreis": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc9/src/bo4e_schemas/com/Preis.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc10/src/bo4e_schemas/com/Preis.json"
                 },
                 {
                     "type": "null"
@@ -88,7 +88,7 @@
         "menge": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc9/src/bo4e_schemas/com/Menge.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc10/src/bo4e_schemas/com/Menge.json"
                 },
                 {
                     "type": "null"
@@ -124,7 +124,7 @@
         "zeitmenge": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc9/src/bo4e_schemas/com/Menge.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc10/src/bo4e_schemas/com/Menge.json"
                 },
                 {
                     "type": "null"

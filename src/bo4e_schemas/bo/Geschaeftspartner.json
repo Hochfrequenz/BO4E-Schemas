@@ -17,7 +17,7 @@
         "_typ": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc9/src/bo4e_schemas/enum/Typ.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc10/src/bo4e_schemas/enum/Typ.json"
                 },
                 {
                     "type": "null"
@@ -34,7 +34,7 @@
                     "type": "null"
                 }
             ],
-            "default": "0.6.1rc9",
+            "default": "0.6.1rc10",
             "title": " Version"
         },
         "amtsgericht": {
@@ -52,7 +52,7 @@
         "anrede": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc9/src/bo4e_schemas/enum/Anrede.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc10/src/bo4e_schemas/enum/Anrede.json"
                 },
                 {
                     "type": "null"
@@ -76,7 +76,7 @@
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc9/src/bo4e_schemas/com/ExterneReferenz.json"
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc10/src/bo4e_schemas/com/ExterneReferenz.json"
                     },
                     "type": "array"
                 },
@@ -91,7 +91,7 @@
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc9/src/bo4e_schemas/enum/Geschaeftspartnerrolle.json"
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc10/src/bo4e_schemas/enum/Geschaeftspartnerrolle.json"
                     },
                     "type": "array"
                 },
@@ -142,7 +142,7 @@
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc9/src/bo4e_schemas/enum/Kontaktart.json"
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc10/src/bo4e_schemas/enum/Kontaktart.json"
                     },
                     "type": "array"
                 },
@@ -192,7 +192,7 @@
         "partneradresse": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc9/src/bo4e_schemas/com/Adresse.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc10/src/bo4e_schemas/com/Adresse.json"
                 },
                 {
                     "type": "null"
