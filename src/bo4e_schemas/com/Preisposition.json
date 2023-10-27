@@ -23,13 +23,13 @@
                     "type": "null"
                 }
             ],
-            "default": "0.6.1rc10",
+            "default": "0.6.1rc11",
             "title": " Version"
         },
         "bdewArtikelnummer": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc10/src/bo4e_schemas/enum/BDEWArtikelnummer.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc11/src/bo4e_schemas/enum/BDEWArtikelnummer.json"
                 },
                 {
                     "type": "null"
@@ -40,7 +40,7 @@
         "berechnungsmethode": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc10/src/bo4e_schemas/enum/Kalkulationsmethode.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc11/src/bo4e_schemas/enum/Kalkulationsmethode.json"
                 },
                 {
                     "type": "null"
@@ -51,7 +51,7 @@
         "bezugsgroesse": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc10/src/bo4e_schemas/enum/Mengeneinheit.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc11/src/bo4e_schemas/enum/Mengeneinheit.json"
                 },
                 {
                     "type": "null"
@@ -116,7 +116,7 @@
         "leistungstyp": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc10/src/bo4e_schemas/enum/Leistungstyp.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc11/src/bo4e_schemas/enum/Leistungstyp.json"
                 },
                 {
                     "type": "null"
@@ -127,7 +127,7 @@
         "preiseinheit": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc10/src/bo4e_schemas/enum/Waehrungseinheit.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc11/src/bo4e_schemas/enum/Waehrungseinheit.json"
                 },
                 {
                     "type": "null"
@@ -139,7 +139,7 @@
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc10/src/bo4e_schemas/com/Preisstaffel.json"
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc11/src/bo4e_schemas/com/Preisstaffel.json"
                     },
                     "type": "array"
                 },
@@ -153,7 +153,7 @@
         "tarifzeit": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc10/src/bo4e_schemas/enum/Tarifzeit.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc11/src/bo4e_schemas/enum/Tarifzeit.json"
                 },
                 {
                     "type": "null"
@@ -164,7 +164,7 @@
         "zeitbasis": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc10/src/bo4e_schemas/enum/Zeiteinheit.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc11/src/bo4e_schemas/enum/Zeiteinheit.json"
                 },
                 {
                     "type": "null"
@@ -175,7 +175,7 @@
         "zonungsgroesse": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc10/src/bo4e_schemas/enum/Bemessungsgroesse.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc11/src/bo4e_schemas/enum/Bemessungsgroesse.json"
                 },
                 {
                     "type": "null"

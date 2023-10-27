@@ -17,7 +17,7 @@
         "_typ": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc10/src/bo4e_schemas/enum/Typ.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc11/src/bo4e_schemas/enum/Typ.json"
                 },
                 {
                     "type": "null"
@@ -34,14 +34,14 @@
                     "type": "null"
                 }
             ],
-            "default": "0.6.1rc10",
+            "default": "0.6.1rc11",
             "title": " Version"
         },
         "externeReferenzen": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc10/src/bo4e_schemas/com/ExterneReferenz.json"
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc11/src/bo4e_schemas/com/ExterneReferenz.json"
                     },
                     "type": "array"
                 },
@@ -55,7 +55,7 @@
         "gueltigkeit": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc10/src/bo4e_schemas/com/Zeitraum.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc11/src/bo4e_schemas/com/Zeitraum.json"
                 },
                 {
                     "type": "null"
@@ -67,7 +67,7 @@
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc10/src/bo4e_schemas/com/Kostenblock.json"
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc11/src/bo4e_schemas/com/Kostenblock.json"
                     },
                     "type": "array"
                 },
@@ -81,7 +81,7 @@
         "kostenklasse": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc10/src/bo4e_schemas/enum/Kostenklasse.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc11/src/bo4e_schemas/enum/Kostenklasse.json"
                 },
                 {
                     "type": "null"
@@ -93,7 +93,7 @@
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc10/src/bo4e_schemas/com/Betrag.json"
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc11/src/bo4e_schemas/com/Betrag.json"
                     },
                     "type": "array"
                 },

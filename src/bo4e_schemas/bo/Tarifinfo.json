@@ -17,7 +17,7 @@
         "_typ": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc10/src/bo4e_schemas/enum/Typ.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc11/src/bo4e_schemas/enum/Typ.json"
                 },
                 {
                     "type": "null"
@@ -34,13 +34,13 @@
                     "type": "null"
                 }
             ],
-            "default": "0.6.1rc10",
+            "default": "0.6.1rc11",
             "title": " Version"
         },
         "anbieter": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc10/src/bo4e_schemas/bo/Marktteilnehmer.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc11/src/bo4e_schemas/bo/Marktteilnehmer.json"
                 },
                 {
                     "type": "null"
@@ -100,7 +100,7 @@
         "energiemix": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc10/src/bo4e_schemas/com/Energiemix.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc11/src/bo4e_schemas/com/Energiemix.json"
                 },
                 {
                     "type": "null"
@@ -112,7 +112,7 @@
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc10/src/bo4e_schemas/com/ExterneReferenz.json"
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc11/src/bo4e_schemas/com/ExterneReferenz.json"
                     },
                     "type": "array"
                 },
@@ -127,7 +127,7 @@
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc10/src/bo4e_schemas/enum/Kundentyp.json"
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc11/src/bo4e_schemas/enum/Kundentyp.json"
                     },
                     "type": "array"
                 },
@@ -141,7 +141,7 @@
         "registeranzahl": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc10/src/bo4e_schemas/enum/Registeranzahl.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc11/src/bo4e_schemas/enum/Registeranzahl.json"
                 },
                 {
                     "type": "null"
@@ -152,7 +152,7 @@
         "sparte": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc10/src/bo4e_schemas/enum/Sparte.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc11/src/bo4e_schemas/enum/Sparte.json"
                 },
                 {
                     "type": "null"
@@ -164,7 +164,7 @@
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc10/src/bo4e_schemas/enum/Tarifmerkmal.json"
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc11/src/bo4e_schemas/enum/Tarifmerkmal.json"
                     },
                     "type": "array"
                 },
@@ -178,7 +178,7 @@
         "tariftyp": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc10/src/bo4e_schemas/enum/Tariftyp.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc11/src/bo4e_schemas/enum/Tariftyp.json"
                 },
                 {
                     "type": "null"
@@ -189,7 +189,7 @@
         "vertragskonditionen": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc10/src/bo4e_schemas/com/Vertragskonditionen.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc11/src/bo4e_schemas/com/Vertragskonditionen.json"
                 },
                 {
                     "type": "null"
@@ -212,7 +212,7 @@
         "zeitlicheGueltigkeit": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc10/src/bo4e_schemas/com/Zeitraum.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc11/src/bo4e_schemas/com/Zeitraum.json"
                 },
                 {
                     "type": "null"
