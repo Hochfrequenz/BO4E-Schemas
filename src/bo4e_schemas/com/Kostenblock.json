@@ -23,7 +23,7 @@
                     "type": "null"
                 }
             ],
-            "default": "0.6.1rc13",
+            "default": "0.6.1rc14",
             "title": " Version"
         },
         "kostenblockbezeichnung": {
@@ -42,7 +42,7 @@
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc13/src/bo4e_schemas/com/Kostenposition.json"
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc14/src/bo4e_schemas/com/Kostenposition.json"
                     },
                     "type": "array"
                 },
@@ -56,7 +56,7 @@
         "summeKostenblock": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc13/src/bo4e_schemas/com/Betrag.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc14/src/bo4e_schemas/com/Betrag.json"
                 },
                 {
                     "type": "null"

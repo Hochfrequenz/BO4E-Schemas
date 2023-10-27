@@ -23,7 +23,7 @@
                     "type": "null"
                 }
             ],
-            "default": "0.6.1rc13",
+            "default": "0.6.1rc14",
             "title": " Version"
         },
         "flurstueck": {

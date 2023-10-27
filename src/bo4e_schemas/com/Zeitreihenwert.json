@@ -23,7 +23,7 @@
                     "type": "null"
                 }
             ],
-            "default": "0.6.1rc13",
+            "default": "0.6.1rc14",
             "title": " Version"
         },
         "datumUhrzeitBis": {
@@ -55,7 +55,7 @@
         "status": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc13/src/bo4e_schemas/enum/Messwertstatus.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc14/src/bo4e_schemas/enum/Messwertstatus.json"
                 },
                 {
                     "type": "null"
@@ -66,7 +66,7 @@
         "statuszusatz": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc13/src/bo4e_schemas/enum/Messwertstatuszusatz.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc14/src/bo4e_schemas/enum/Messwertstatuszusatz.json"
                 },
                 {
                     "type": "null"

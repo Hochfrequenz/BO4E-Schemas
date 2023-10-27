@@ -23,13 +23,13 @@
                     "type": "null"
                 }
             ],
-            "default": "0.6.1rc13",
+            "default": "0.6.1rc14",
             "title": " Version"
         },
         "einheit": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc13/src/bo4e_schemas/enum/Mengeneinheit.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc14/src/bo4e_schemas/enum/Mengeneinheit.json"
                 },
                 {
                     "type": "null"
