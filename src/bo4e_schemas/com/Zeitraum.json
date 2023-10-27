@@ -23,7 +23,7 @@
                     "type": "null"
                 }
             ],
-            "default": "0.6.1rc8",
+            "default": "0.6.1rc9",
             "title": " Version"
         },
         "dauer": {
@@ -44,7 +44,7 @@
         "einheit": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc8/src/bo4e_schemas/enum/Zeiteinheit.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc9/src/bo4e_schemas/enum/Zeiteinheit.json"
                 },
                 {
                     "type": "null"

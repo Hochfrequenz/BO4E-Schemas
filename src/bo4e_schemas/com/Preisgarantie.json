@@ -23,7 +23,7 @@
                     "type": "null"
                 }
             ],
-            "default": "0.6.1rc8",
+            "default": "0.6.1rc9",
             "title": " Version"
         },
         "beschreibung": {
@@ -41,7 +41,7 @@
         "preisgarantietyp": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc8/src/bo4e_schemas/enum/Preisgarantietyp.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc9/src/bo4e_schemas/enum/Preisgarantietyp.json"
                 },
                 {
                     "type": "null"
@@ -52,7 +52,7 @@
         "zeitlicheGueltigkeit": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc8/src/bo4e_schemas/com/Zeitraum.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc9/src/bo4e_schemas/com/Zeitraum.json"
                 },
                 {
                     "type": "null"

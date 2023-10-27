@@ -17,7 +17,7 @@
         "_typ": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc8/src/bo4e_schemas/enum/Typ.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc9/src/bo4e_schemas/enum/Typ.json"
                 },
                 {
                     "type": "null"
@@ -34,7 +34,7 @@
                     "type": "null"
                 }
             ],
-            "default": "0.6.1rc8",
+            "default": "0.6.1rc9",
             "title": " Version"
         },
         "bezeichnung": {
@@ -53,7 +53,7 @@
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc8/src/bo4e_schemas/com/ExterneReferenz.json"
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc9/src/bo4e_schemas/com/ExterneReferenz.json"
                     },
                     "type": "array"
                 },
@@ -68,7 +68,7 @@
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc8/src/bo4e_schemas/com/Regionskriterium.json"
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc9/src/bo4e_schemas/com/Regionskriterium.json"
                     },
                     "type": "array"
                 },
@@ -83,7 +83,7 @@
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc8/src/bo4e_schemas/com/Regionskriterium.json"
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc9/src/bo4e_schemas/com/Regionskriterium.json"
                     },
                     "type": "array"
                 },

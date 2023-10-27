@@ -23,7 +23,7 @@
                     "type": "null"
                 }
             ],
-            "default": "0.6.1rc8",
+            "default": "0.6.1rc9",
             "title": " Version"
         },
         "artikelId": {
@@ -41,7 +41,7 @@
         "artikelnummer": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc8/src/bo4e_schemas/enum/BDEWArtikelnummer.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc9/src/bo4e_schemas/enum/BDEWArtikelnummer.json"
                 },
                 {
                     "type": "null"
@@ -52,7 +52,7 @@
         "einzelpreis": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc8/src/bo4e_schemas/com/Preis.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc9/src/bo4e_schemas/com/Preis.json"
                 },
                 {
                     "type": "null"
@@ -101,7 +101,7 @@
         "positionsMenge": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc8/src/bo4e_schemas/com/Menge.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc9/src/bo4e_schemas/com/Menge.json"
                 },
                 {
                     "type": "null"
@@ -136,7 +136,7 @@
         "teilrabattNetto": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc8/src/bo4e_schemas/com/Betrag.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc9/src/bo4e_schemas/com/Betrag.json"
                 },
                 {
                     "type": "null"
@@ -147,7 +147,7 @@
         "teilsummeNetto": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc8/src/bo4e_schemas/com/Betrag.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc9/src/bo4e_schemas/com/Betrag.json"
                 },
                 {
                     "type": "null"
@@ -158,7 +158,7 @@
         "teilsummeSteuer": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc8/src/bo4e_schemas/com/Steuerbetrag.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc9/src/bo4e_schemas/com/Steuerbetrag.json"
                 },
                 {
                     "type": "null"
@@ -169,7 +169,7 @@
         "zeitbezogeneMenge": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc8/src/bo4e_schemas/com/Menge.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc9/src/bo4e_schemas/com/Menge.json"
                 },
                 {
                     "type": "null"
@@ -180,7 +180,7 @@
         "zeiteinheit": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc8/src/bo4e_schemas/enum/Zeiteinheit.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc9/src/bo4e_schemas/enum/Zeiteinheit.json"
                 },
                 {
                     "type": "null"
