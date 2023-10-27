@@ -23,13 +23,13 @@
                     "type": "null"
                 }
             ],
-            "default": "0.6.1rc11",
+            "default": "0.6.1rc12",
             "title": " Version"
         },
         "kriterium": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc11/src/bo4e_schemas/enum/Tarifregionskriterium.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc12/src/bo4e_schemas/enum/Tarifregionskriterium.json"
                 },
                 {
                     "type": "null"
