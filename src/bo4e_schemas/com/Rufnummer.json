@@ -1,22 +1,4 @@
 {
-    "$defs": {
-        "Rufnummernart": {
-            "description": "Abbildung verschiedener Rufnummerntypen.",
-            "enum": [
-                "RUF_ZENTRALE",
-                "FAX_ZENTRALE",
-                "SAMMELRUF",
-                "SAMMELFAX",
-                "ABTEILUNGRUF",
-                "ABTEILUNGFAX",
-                "RUF_DURCHWAHL",
-                "FAX_DURCHWAHL",
-                "MOBIL_NUMMER"
-            ],
-            "title": "Rufnummernart",
-            "type": "string"
-        }
-    },
     "additionalProperties": true,
     "description": "Contains information to call or fax someone\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/com/Rufnummer.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Rufnummer JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/Hochfrequenz/BO4E-python/main/json_schemas/com/Rufnummer.json>`_",
     "properties": {
@@ -41,13 +23,13 @@
                     "type": "null"
                 }
             ],
-            "default": "0.6.1rc6",
+            "default": "0.6.1rc7",
             "title": " Version"
         },
         "nummerntyp": {
             "anyOf": [
                 {
-                    "$ref": "#/$defs/Rufnummernart"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.0.0/src/bo4e_schemas/enum/Rufnummernart.json"
                 },
                 {
                     "type": "null"

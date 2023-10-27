@@ -1,45 +1,4 @@
 {
-    "$defs": {
-        "Mengeneinheit": {
-            "description": "Einheit: Messgrößen, die per Messung oder Vorgabe ermittelt werden können.",
-            "enum": [
-                "W",
-                "WH",
-                "KW",
-                "KWH",
-                "KVARH",
-                "MW",
-                "MWH",
-                "STUECK",
-                "KUBIKMETER",
-                "STUNDE",
-                "TAG",
-                "MONAT",
-                "JAHR",
-                "PROZENT"
-            ],
-            "title": "Mengeneinheit",
-            "type": "string"
-        },
-        "Preisstatus": {
-            "description": "Statusinformation für Preise",
-            "enum": [
-                "VORLAEUFIG",
-                "ENDGUELTIG"
-            ],
-            "title": "Preisstatus",
-            "type": "string"
-        },
-        "Waehrungseinheit": {
-            "description": "In diesem Enum werden die Währungen und ihre Untereinheiten definiert, beispielsweise für die Verwendung in Preisen.",
-            "enum": [
-                "EUR",
-                "CT"
-            ],
-            "title": "Waehrungseinheit",
-            "type": "string"
-        }
-    },
     "additionalProperties": true,
     "description": "Abbildung eines Preises mit Wert, Einheit, Bezugswert und Status.\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/com/Preis.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Preis JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/Hochfrequenz/BO4E-python/main/json_schemas/com/Preis.json>`_",
     "properties": {
@@ -64,13 +23,13 @@
                     "type": "null"
                 }
             ],
-            "default": "0.6.1rc6",
+            "default": "0.6.1rc7",
             "title": " Version"
         },
         "bezugswert": {
             "anyOf": [
                 {
-                    "$ref": "#/$defs/Mengeneinheit"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.0.0/src/bo4e_schemas/enum/Mengeneinheit.json"
                 },
                 {
                     "type": "null"
@@ -81,7 +40,7 @@
         "einheit": {
             "anyOf": [
                 {
-                    "$ref": "#/$defs/Waehrungseinheit"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.0.0/src/bo4e_schemas/enum/Waehrungseinheit.json"
                 },
                 {
                     "type": "null"
@@ -92,7 +51,7 @@
         "status": {
             "anyOf": [
                 {
-                    "$ref": "#/$defs/Preisstatus"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.0.0/src/bo4e_schemas/enum/Preisstatus.json"
                 },
                 {
                     "type": "null"

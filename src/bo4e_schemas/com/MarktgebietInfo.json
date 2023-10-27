@@ -23,7 +23,7 @@
                     "type": "null"
                 }
             ],
-            "default": "0.6.1rc6",
+            "default": "0.6.1rc7",
             "title": " Version"
         },
         "marktgebiet": {

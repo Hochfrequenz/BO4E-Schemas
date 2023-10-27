@@ -1,0 +1,15 @@
+{
+    "description": "Der Status eines Zählerstandes",
+    "enum": [
+        "ABGELESEN",
+        "ERSATZWERT",
+        "VORSCHLAGSWERT",
+        "NICHT_VERWENDBAR",
+        "PROGNOSEWERT",
+        "VORLAEUFIGERWERT",
+        "ENERGIEMENGESUMMIERT",
+        "FEHLT"
+    ],
+    "title": "Messwertstatus",
+    "type": "string"
+}

@@ -1,36 +1,4 @@
 {
-    "$defs": {
-        "Energierichtung": {
-            "description": "Spezifiziert die Energierichtung einer Markt- und/oder Messlokation",
-            "enum": [
-                "AUSSP",
-                "EINSP"
-            ],
-            "title": "Energierichtung",
-            "type": "string"
-        },
-        "Mengeneinheit": {
-            "description": "Einheit: Messgrößen, die per Messung oder Vorgabe ermittelt werden können.",
-            "enum": [
-                "W",
-                "WH",
-                "KW",
-                "KWH",
-                "KVARH",
-                "MW",
-                "MWH",
-                "STUECK",
-                "KUBIKMETER",
-                "STUNDE",
-                "TAG",
-                "MONAT",
-                "JAHR",
-                "PROZENT"
-            ],
-            "title": "Mengeneinheit",
-            "type": "string"
-        }
-    },
     "additionalProperties": true,
     "description": "Mit dieser Komponente werden Zählwerke modelliert.\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/com/Zaehlwerk.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Zaehlwerk JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/Hochfrequenz/BO4E-python/main/json_schemas/com/Zaehlwerk.json>`_",
     "properties": {
@@ -55,8 +23,20 @@
                     "type": "null"
                 }
             ],
-            "default": "0.6.1rc6",
+            "default": "0.6.1rc7",
             "title": " Version"
+        },
+        "anzahlAblesungen": {
+            "anyOf": [
+                {
+                    "type": "integer"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "title": "Anzahlablesungen"
         },
         "bezeichnung": {
             "anyOf": [
@@ -73,13 +53,84 @@
         "einheit": {
             "anyOf": [
                 {
-                    "$ref": "#/$defs/Mengeneinheit"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.0.0/src/bo4e_schemas/enum/Mengeneinheit.json"
                 },
                 {
                     "type": "null"
                 }
             ],
             "default": null
+        },
+        "istAbrechnungsrelevant": {
+            "anyOf": [
+                {
+                    "type": "boolean"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "title": "Istabrechnungsrelevant"
+        },
+        "istSchwachlastfaehig": {
+            "anyOf": [
+                {
+                    "type": "boolean"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "title": "Istschwachlastfaehig"
+        },
+        "istSteuerbefreit": {
+            "anyOf": [
+                {
+                    "type": "boolean"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "title": "Iststeuerbefreit"
+        },
+        "istUnterbrechbar": {
+            "anyOf": [
+                {
+                    "type": "boolean"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "title": "Istunterbrechbar"
+        },
+        "konzessionsabgabe": {
+            "anyOf": [
+                {
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.0.0/src/bo4e_schemas/com/Konzessionsabgabe.json"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null
+        },
+        "nachkommastelle": {
+            "anyOf": [
+                {
+                    "type": "integer"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "title": "Nachkommastelle"
         },
         "obisKennzahl": {
             "anyOf": [
@@ -96,7 +147,56 @@
         "richtung": {
             "anyOf": [
                 {
-                    "$ref": "#/$defs/Energierichtung"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.0.0/src/bo4e_schemas/enum/Energierichtung.json"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null
+        },
+        "verbrauchsart": {
+            "anyOf": [
+                {
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.0.0/src/bo4e_schemas/enum/Verbrauchsart.json"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null
+        },
+        "verwendungszwecke": {
+            "anyOf": [
+                {
+                    "items": {
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.0.0/src/bo4e_schemas/com/VerwendungszweckProMarktrolle.json"
+                    },
+                    "type": "array"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "title": "Verwendungszwecke"
+        },
+        "vorkommastelle": {
+            "anyOf": [
+                {
+                    "type": "integer"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "title": "Vorkommastelle"
+        },
+        "waermenutzung": {
+            "anyOf": [
+                {
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.0.0/src/bo4e_schemas/enum/Waermenutzung.json"
                 },
                 {
                     "type": "null"
@@ -130,6 +230,17 @@
             ],
             "default": null,
             "title": "Zaehlwerkid"
+        },
+        "zaehlzeitregister": {
+            "anyOf": [
+                {
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.0.0/src/bo4e_schemas/com/Zaehlzeitregister.json"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null
         }
     },
     "title": "Zaehlwerk",

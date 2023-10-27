@@ -1,0 +1,12 @@
+{
+    "description": "Übersicht möglicher Anreden, z.B. eines Geschäftspartners.",
+    "enum": [
+        "HERR",
+        "FRAU",
+        "EHELEUTE",
+        "FIRMA",
+        "INDIVIDUELL"
+    ],
+    "title": "Anrede",
+    "type": "string"
+}
