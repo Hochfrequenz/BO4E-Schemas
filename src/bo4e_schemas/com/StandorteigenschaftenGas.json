@@ -23,14 +23,14 @@
                     "type": "null"
                 }
             ],
-            "default": "0.6.1rc7",
+            "default": "0.6.1rc8",
             "title": " Version"
         },
         "marktgebiete": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.0.0/src/bo4e_schemas/com/MarktgebietInfo.json"
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1-rc8/src/bo4e_schemas/com/MarktgebietInfo.json"
                     },
                     "type": "array"
                 },
