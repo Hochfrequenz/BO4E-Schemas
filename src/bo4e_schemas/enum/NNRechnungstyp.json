@@ -11,6 +11,6 @@
         "ZUSAETZLICHE_13TE_RECHNUNG",
         "MEHRMINDERMENGENRECHNUNG"
     ],
-    "title": "NetznutzungRechnungstyp",
+    "title": "NNRechnungstyp",
     "type": "string"
 }

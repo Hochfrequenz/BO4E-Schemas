@@ -7,7 +7,6 @@
         "BUENDELVERTRAG",
         "ENERGIEMENGE",
         "FREMDKOSTEN",
-        "GERAET",
         "GESCHAEFTSOBJEKT",
         "GESCHAEFTSPARTNER",
         "KOSTEN",
@@ -36,6 +35,6 @@
         "ZAEHLER",
         "ZEITREIHE"
     ],
-    "title": "Typ",
+    "title": "BoTyp",
     "type": "string"
 }
