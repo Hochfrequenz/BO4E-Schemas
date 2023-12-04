@@ -14,19 +14,34 @@
             "default": null,
             "title": " Id"
         },
-        "boTyp": {
-            "allOf": [
+        "_typ": {
+            "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1/src/bo4e_schemas/enum/BoTyp.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.2-rc1/src/bo4e_schemas/enum/Typ.json"
+                },
+                {
+                    "type": "null"
                 }
             ],
             "default": "ENERGIEMENGE"
+        },
+        "_version": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": "0.6.2rc1",
+            "title": " Version"
         },
         "energieverbrauch": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1/src/bo4e_schemas/com/Verbrauch.json"
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.2-rc1/src/bo4e_schemas/com/Verbrauch.json"
                     },
                     "type": "array"
                 },
@@ -36,21 +51,6 @@
             ],
             "default": null,
             "title": "Energieverbrauch"
-        },
-        "externeReferenzen": {
-            "anyOf": [
-                {
-                    "items": {
-                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1/src/bo4e_schemas/com/ExterneReferenz.json"
-                    },
-                    "type": "array"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "default": null,
-            "title": "Externereferenzen"
         },
         "lokationsId": {
             "anyOf": [
@@ -67,7 +67,7 @@
         "lokationstyp": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1/src/bo4e_schemas/enum/Lokationstyp.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.2-rc1/src/bo4e_schemas/enum/Lokationstyp.json"
                 },
                 {
                     "type": "null"
@@ -75,10 +75,20 @@
             ],
             "default": null
         },
-        "versionstruktur": {
-            "default": "2",
-            "title": "Versionstruktur",
-            "type": "string"
+        "zusatzAttribute": {
+            "anyOf": [
+                {
+                    "items": {
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.2-rc1/src/bo4e_schemas/ZusatzAttribut.json"
+                    },
+                    "type": "array"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "title": "Zusatzattribute"
         }
     },
     "title": "Energiemenge",

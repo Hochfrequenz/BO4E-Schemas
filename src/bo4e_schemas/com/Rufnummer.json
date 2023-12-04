@@ -14,10 +14,22 @@
             "default": null,
             "title": " Id"
         },
+        "_version": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": "0.6.2rc1",
+            "title": " Version"
+        },
         "nummerntyp": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1/src/bo4e_schemas/enum/Rufnummernart.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.2-rc1/src/bo4e_schemas/enum/Rufnummernart.json"
                 },
                 {
                     "type": "null"
@@ -36,6 +48,21 @@
             ],
             "default": null,
             "title": "Rufnummer"
+        },
+        "zusatzAttribute": {
+            "anyOf": [
+                {
+                    "items": {
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.2-rc1/src/bo4e_schemas/ZusatzAttribut.json"
+                    },
+                    "type": "array"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "title": "Zusatzattribute"
         }
     },
     "title": "Rufnummer",

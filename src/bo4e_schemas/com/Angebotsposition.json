@@ -14,6 +14,18 @@
             "default": null,
             "title": " Id"
         },
+        "_version": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": "0.6.2rc1",
+            "title": " Version"
+        },
         "positionsbezeichnung": {
             "anyOf": [
                 {
@@ -29,7 +41,7 @@
         "positionskosten": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1/src/bo4e_schemas/com/Betrag.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.2-rc1/src/bo4e_schemas/com/Betrag.json"
                 },
                 {
                     "type": "null"
@@ -40,7 +52,7 @@
         "positionsmenge": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1/src/bo4e_schemas/com/Menge.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.2-rc1/src/bo4e_schemas/com/Menge.json"
                 },
                 {
                     "type": "null"
@@ -51,13 +63,28 @@
         "positionspreis": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1/src/bo4e_schemas/com/Preis.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.2-rc1/src/bo4e_schemas/com/Preis.json"
                 },
                 {
                     "type": "null"
                 }
             ],
             "default": null
+        },
+        "zusatzAttribute": {
+            "anyOf": [
+                {
+                    "items": {
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.2-rc1/src/bo4e_schemas/ZusatzAttribut.json"
+                    },
+                    "type": "array"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "title": "Zusatzattribute"
         }
     },
     "title": "Angebotsposition",

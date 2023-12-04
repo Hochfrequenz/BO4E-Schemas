@@ -14,19 +14,34 @@
             "default": null,
             "title": " Id"
         },
-        "boTyp": {
-            "allOf": [
+        "_typ": {
+            "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1/src/bo4e_schemas/enum/BoTyp.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.2-rc1/src/bo4e_schemas/enum/Typ.json"
+                },
+                {
+                    "type": "null"
                 }
             ],
             "default": "GESCHAEFTSOBJEKT"
         },
-        "externeReferenzen": {
+        "_version": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": "0.6.2rc1",
+            "title": " Version"
+        },
+        "zusatzAttribute": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.1/src/bo4e_schemas/com/ExterneReferenz.json"
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.2-rc1/src/bo4e_schemas/ZusatzAttribut.json"
                     },
                     "type": "array"
                 },
@@ -35,12 +50,7 @@
                 }
             ],
             "default": null,
-            "title": "Externereferenzen"
-        },
-        "versionstruktur": {
-            "default": "2",
-            "title": "Versionstruktur",
-            "type": "string"
+            "title": "Zusatzattribute"
         }
     },
     "title": "Geschaeftsobjekt",
