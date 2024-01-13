@@ -10,18 +10,11 @@
         "MWH",
         "STUECK",
         "KUBIKMETER",
-        "SEKUNDE",
-        "MINUTE",
         "STUNDE",
-        "VIERTEL_STUNDE",
         "TAG",
-        "WOCHE",
         "MONAT",
-        "QUARTAL",
-        "HALBJAHR",
         "JAHR",
-        "PROZENT",
-        "KVAR"
+        "PROZENT"
     ],
     "title": "Mengeneinheit",
     "type": "string"

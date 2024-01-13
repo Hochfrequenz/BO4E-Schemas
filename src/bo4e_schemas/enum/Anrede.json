@@ -5,9 +5,7 @@
         "FRAU",
         "EHELEUTE",
         "FIRMA",
-        "FAMILIE",
-        "ERBENGEMEINSCHAFT",
-        "GRUNDSTUECKSGEMEINSCHAFT"
+        "INDIVIDUELL"
     ],
     "title": "Anrede",
     "type": "string"

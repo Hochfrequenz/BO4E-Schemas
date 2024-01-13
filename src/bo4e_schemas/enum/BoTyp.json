@@ -7,11 +7,11 @@
         "BUENDELVERTRAG",
         "ENERGIEMENGE",
         "FREMDKOSTEN",
-        "GERAET",
         "GESCHAEFTSOBJEKT",
         "GESCHAEFTSPARTNER",
         "KOSTEN",
         "LASTGANG",
+        "LASTGANG_KOMPAKT",
         "MARKTLOKATION",
         "MESSLOKATION",
         "MARKTTEILNEHMER",
@@ -35,6 +35,6 @@
         "ZAEHLER",
         "ZEITREIHE"
     ],
-    "title": "Typ",
+    "title": "BoTyp",
     "type": "string"
 }

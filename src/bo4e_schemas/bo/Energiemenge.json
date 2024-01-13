@@ -1,6 +1,6 @@
 {
     "additionalProperties": true,
-    "description": "Abbildung von Mengen, die Lokationen zugeordnet sind\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/Energiemenge.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Energiemenge JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.0-/src/bo4e_schemas/bo/Energiemenge.json>`_",
+    "description": "Abbildung von Mengen, die Lokationen zugeordnet sind\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/Energiemenge.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Energiemenge JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/Hochfrequenz/BO4E-python/main/json_schemas/bo/Energiemenge.json>`_",
     "properties": {
         "_id": {
             "anyOf": [
@@ -14,34 +14,19 @@
             "default": null,
             "title": " Id"
         },
-        "_typ": {
-            "anyOf": [
+        "boTyp": {
+            "allOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.0/src/bo4e_schemas/enum/Typ.json"
-                },
-                {
-                    "type": "null"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.2-rc2/src/bo4e_schemas/enum/BoTyp.json"
                 }
             ],
             "default": "ENERGIEMENGE"
-        },
-        "_version": {
-            "anyOf": [
-                {
-                    "type": "string"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "default": "202401.0.0",
-            "title": " Version"
         },
         "energieverbrauch": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.0/src/bo4e_schemas/com/Verbrauch.json"
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.2-rc2/src/bo4e_schemas/com/Verbrauch.json"
                     },
                     "type": "array"
                 },
@@ -51,6 +36,21 @@
             ],
             "default": null,
             "title": "Energieverbrauch"
+        },
+        "externeReferenzen": {
+            "anyOf": [
+                {
+                    "items": {
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.2-rc2/src/bo4e_schemas/com/ExterneReferenz.json"
+                    },
+                    "type": "array"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "title": "Externereferenzen"
         },
         "lokationsId": {
             "anyOf": [
@@ -67,7 +67,7 @@
         "lokationstyp": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.0/src/bo4e_schemas/enum/Lokationstyp.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.2-rc2/src/bo4e_schemas/enum/Lokationstyp.json"
                 },
                 {
                     "type": "null"
@@ -75,20 +75,10 @@
             ],
             "default": null
         },
-        "zusatzAttribute": {
-            "anyOf": [
-                {
-                    "items": {
-                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.0/src/bo4e_schemas/ZusatzAttribut.json"
-                    },
-                    "type": "array"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "default": null,
-            "title": "Zusatzattribute"
+        "versionstruktur": {
+            "default": "2",
+            "title": "Versionstruktur",
+            "type": "string"
         }
     },
     "title": "Energiemenge",
