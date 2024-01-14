@@ -30,7 +30,7 @@
         "erzeugungsart": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.2-rc2/src/bo4e_schemas/enum/Erzeugungsart.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v0.6.2/src/bo4e_schemas/enum/Erzeugungsart.json"
                 },
                 {
                     "type": "null"
