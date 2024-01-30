@@ -3,15 +3,15 @@
     "enum": [
         "ANGEBOT",
         "ANSPRECHPARTNER",
-        "AUSSCHREIUNG",
+        "AUSSCHREIBUNG",
         "BUENDELVERTRAG",
         "ENERGIEMENGE",
         "FREMDKOSTEN",
+        "GERAET",
         "GESCHAEFTSOBJEKT",
         "GESCHAEFTSPARTNER",
         "KOSTEN",
         "LASTGANG",
-        "LASTGANG_KOMPAKT",
         "MARKTLOKATION",
         "MESSLOKATION",
         "MARKTTEILNEHMER",
@@ -35,6 +35,6 @@
         "ZAEHLER",
         "ZEITREIHE"
     ],
-    "title": "BoTyp",
+    "title": "Typ",
     "type": "string"
 }

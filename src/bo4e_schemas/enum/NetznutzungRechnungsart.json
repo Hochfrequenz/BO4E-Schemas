@@ -4,6 +4,6 @@
         "HANDELSRECHNUNG",
         "SELBSTAUSGESTELLT"
     ],
-    "title": "NNRechnungsart",
+    "title": "NetznutzungRechnungsart",
     "type": "string"
 }
