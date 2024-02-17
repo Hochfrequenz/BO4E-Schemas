@@ -1,6 +1,6 @@
 {
     "additionalProperties": true,
-    "description": "Mit diesem Objekt können Geschäftspartner übertragen werden.\nSowohl Unternehmen, als auch Privatpersonen können Geschäftspartner sein.\nHinweis: Marktteilnehmer haben ein eigenes BO, welches sich von diesem BO ableitet.\nHier sollte daher keine Zuordnung zu Marktrollen erfolgen.\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/Geschaeftspartner.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Geschaeftspartner JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1-/src/bo4e_schemas/bo/Geschaeftspartner.json>`_",
+    "description": "Mit diesem Objekt können Geschäftspartner übertragen werden.\nSowohl Unternehmen, als auch Privatpersonen können Geschäftspartner sein.\nHinweis: Marktteilnehmer haben ein eigenes BO, welches sich von diesem BO ableitet.\nHier sollte daher keine Zuordnung zu Marktrollen erfolgen.\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/Geschaeftspartner.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Geschaeftspartner JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/bo/Geschaeftspartner.json>`_",
     "properties": {
         "_id": {
             "anyOf": [
@@ -17,7 +17,7 @@
         "_typ": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1/src/bo4e_schemas/enum/Typ.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/enum/Typ.json"
                 },
                 {
                     "type": "null"
@@ -34,8 +34,19 @@
                     "type": "null"
                 }
             ],
-            "default": "202401.0.1",
+            "default": "202401.1.0rc1",
             "title": " Version"
+        },
+        "adresse": {
+            "anyOf": [
+                {
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/com/Adresse.json"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null
         },
         "amtsgericht": {
             "anyOf": [
@@ -52,7 +63,7 @@
         "anrede": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1/src/bo4e_schemas/enum/Anrede.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/enum/Anrede.json"
                 },
                 {
                     "type": "null"
@@ -60,23 +71,11 @@
             ],
             "default": null
         },
-        "eMailAdresse": {
-            "anyOf": [
-                {
-                    "type": "string"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "default": null,
-            "title": "Emailadresse"
-        },
-        "geschaeftspartnerrolle": {
+        "ansprechpartner": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1/src/bo4e_schemas/enum/Geschaeftspartnerrolle.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/bo/Person.json"
                     },
                     "type": "array"
                 },
@@ -85,7 +84,22 @@
                 }
             ],
             "default": null,
-            "title": "Geschaeftspartnerrolle"
+            "title": "Ansprechpartner"
+        },
+        "geschaeftspartnerrollen": {
+            "anyOf": [
+                {
+                    "items": {
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/enum/Geschaeftspartnerrolle.json"
+                    },
+                    "type": "array"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "title": "Geschaeftspartnerrollen"
         },
         "glaeubigerId": {
             "anyOf": [
@@ -99,7 +113,7 @@
             "default": null,
             "title": "Glaeubigerid"
         },
-        "hrnummer": {
+        "handelsregisternummer": {
             "anyOf": [
                 {
                     "type": "string"
@@ -109,25 +123,25 @@
                 }
             ],
             "default": null,
-            "title": "Hrnummer"
+            "title": "Handelsregisternummer"
         },
-        "istGewerbe": {
+        "individuelleAnrede": {
             "anyOf": [
                 {
-                    "type": "boolean"
+                    "type": "string"
                 },
                 {
                     "type": "null"
                 }
             ],
             "default": null,
-            "title": "Istgewerbe"
+            "title": "Individuelleanrede"
         },
-        "kontaktweg": {
+        "kontaktwege": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1/src/bo4e_schemas/enum/Kontaktart.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/com/Kontaktweg.json"
                     },
                     "type": "array"
                 },
@@ -136,9 +150,9 @@
                 }
             ],
             "default": null,
-            "title": "Kontaktweg"
+            "title": "Kontaktwege"
         },
-        "name1": {
+        "nachname": {
             "anyOf": [
                 {
                     "type": "string"
@@ -148,9 +162,9 @@
                 }
             ],
             "default": null,
-            "title": "Name1"
+            "title": "Nachname"
         },
-        "name2": {
+        "organisationsname": {
             "anyOf": [
                 {
                     "type": "string"
@@ -160,24 +174,23 @@
                 }
             ],
             "default": null,
-            "title": "Name2"
+            "title": "Organisationsname"
         },
-        "name3": {
+        "organisationstyp": {
             "anyOf": [
                 {
-                    "type": "string"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/enum/Organisationstyp.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "title": "Name3"
+            "default": null
         },
-        "partneradresse": {
+        "titel": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1/src/bo4e_schemas/com/Adresse.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/enum/Titel.json"
                 },
                 {
                     "type": "null"
@@ -197,6 +210,18 @@
             "default": null,
             "title": "Umsatzsteuerid"
         },
+        "vorname": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "title": "Vorname"
+        },
         "website": {
             "anyOf": [
                 {
@@ -213,7 +238,7 @@
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1/src/bo4e_schemas/ZusatzAttribut.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/ZusatzAttribut.json"
                     },
                     "type": "array"
                 },

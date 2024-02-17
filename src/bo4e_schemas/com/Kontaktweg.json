@@ -1,59 +1,7 @@
 {
     "additionalProperties": true,
-    "description": "Die Sigmoid-Funktion, beispielsweise zur Berechnung eines Leistungspreises hat die Form:\nLP=A/(1+(P/B)^C)+D\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/com/Sigmoidparameter.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Sigmoidparameter JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/com/Sigmoidparameter.json>`_",
+    "description": "Die Komponente wird dazu verwendet, die Kontaktwege innerhalb des BOs Person darzustellen\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/com/Kontakt.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Kontakt JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/com/Kontakt.json>`_",
     "properties": {
-        "A": {
-            "anyOf": [
-                {
-                    "format": "decimal",
-                    "type": "number"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "default": null,
-            "title": "A"
-        },
-        "B": {
-            "anyOf": [
-                {
-                    "format": "decimal",
-                    "type": "number"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "default": null,
-            "title": "B"
-        },
-        "C": {
-            "anyOf": [
-                {
-                    "format": "decimal",
-                    "type": "number"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "default": null,
-            "title": "C"
-        },
-        "D": {
-            "anyOf": [
-                {
-                    "format": "decimal",
-                    "type": "number"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "default": null,
-            "title": "D"
-        },
         "_id": {
             "anyOf": [
                 {
@@ -78,6 +26,53 @@
             "default": "202401.1.0rc1",
             "title": " Version"
         },
+        "beschreibung": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "title": "Beschreibung"
+        },
+        "istBevorzugterKontaktweg": {
+            "anyOf": [
+                {
+                    "type": "boolean"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "title": "Istbevorzugterkontaktweg"
+        },
+        "kontaktart": {
+            "anyOf": [
+                {
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/enum/Kontaktart.json"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null
+        },
+        "kontaktwert": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "title": "Kontaktwert"
+        },
         "zusatzAttribute": {
             "anyOf": [
                 {
@@ -94,6 +89,6 @@
             "title": "Zusatzattribute"
         }
     },
-    "title": "Sigmoidparameter",
+    "title": "Kontaktweg",
     "type": "object"
 }

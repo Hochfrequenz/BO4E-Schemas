@@ -1,6 +1,6 @@
 {
     "additionalProperties": true,
-    "description": "Object containing information about a Ansprechpartner\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/Ansprechpartner.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Ansprechpartner JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1-/src/bo4e_schemas/bo/Ansprechpartner.json>`_",
+    "description": "Object containing information about a Person\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/Person.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Person JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/bo/Person.json>`_",
     "properties": {
         "_id": {
             "anyOf": [
@@ -17,13 +17,13 @@
         "_typ": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1/src/bo4e_schemas/enum/Typ.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/enum/Typ.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": "ANSPRECHPARTNER"
+            "default": "PERSON"
         },
         "_version": {
             "anyOf": [
@@ -34,13 +34,13 @@
                     "type": "null"
                 }
             ],
-            "default": "202401.0.1",
+            "default": "202401.1.0rc1",
             "title": " Version"
         },
         "adresse": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1/src/bo4e_schemas/com/Adresse.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/com/Adresse.json"
                 },
                 {
                     "type": "null"
@@ -51,7 +51,7 @@
         "anrede": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1/src/bo4e_schemas/enum/Anrede.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/enum/Anrede.json"
                 },
                 {
                     "type": "null"
@@ -59,9 +59,10 @@
             ],
             "default": null
         },
-        "eMailAdresse": {
+        "geburtsdatum": {
             "anyOf": [
                 {
+                    "format": "date-time",
                     "type": "string"
                 },
                 {
@@ -69,18 +70,7 @@
                 }
             ],
             "default": null,
-            "title": "Emailadresse"
-        },
-        "geschaeftspartner": {
-            "anyOf": [
-                {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1/src/bo4e_schemas/bo/Geschaeftspartner.json"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "default": null
+            "title": "Geburtsdatum"
         },
         "individuelleAnrede": {
             "anyOf": [
@@ -106,6 +96,21 @@
             "default": null,
             "title": "Kommentar"
         },
+        "kontaktwege": {
+            "anyOf": [
+                {
+                    "items": {
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/com/Kontaktweg.json"
+                    },
+                    "type": "array"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "title": "Kontaktwege"
+        },
         "nachname": {
             "anyOf": [
                 {
@@ -118,21 +123,10 @@
             "default": null,
             "title": "Nachname"
         },
-        "rufnummer": {
-            "anyOf": [
-                {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1/src/bo4e_schemas/com/Rufnummer.json"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "default": null
-        },
         "titel": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1/src/bo4e_schemas/enum/Titel.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/enum/Titel.json"
                 },
                 {
                     "type": "null"
@@ -156,7 +150,7 @@
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1/src/bo4e_schemas/ZusatzAttribut.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/ZusatzAttribut.json"
                     },
                     "type": "array"
                 },
@@ -167,18 +161,22 @@
             "default": null,
             "title": "Zusatzattribute"
         },
-        "zustaendigkeit": {
+        "zustaendigkeiten": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1/src/bo4e_schemas/com/Zustaendigkeit.json"
+                    "items": {
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/com/Zustaendigkeit.json"
+                    },
+                    "type": "array"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "title": "Zustaendigkeiten"
         }
     },
-    "title": "Ansprechpartner",
+    "title": "Person",
     "type": "object"
 }

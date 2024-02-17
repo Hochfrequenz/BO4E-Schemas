@@ -1,8 +1,8 @@
 {
-    "description": "Art des Kontaktes zwischen Geschäftspartnern.",
+    "description": "Gibt an, auf welchem Weg die Person oder der Geschäftspartner kontaktiert werden kann.",
     "enum": [
-        "ANSCHREIBEN",
-        "TELEFONAT",
+        "POSTWEG",
+        "TELEFON",
         "FAX",
         "E_MAIL",
         "SMS"
