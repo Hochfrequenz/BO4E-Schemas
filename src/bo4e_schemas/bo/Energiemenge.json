@@ -1,6 +1,6 @@
 {
     "additionalProperties": true,
-    "description": "Abbildung von Mengen, die Lokationen zugeordnet sind\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/Energiemenge.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Energiemenge JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2-/src/bo4e_schemas/bo/Energiemenge.json>`_",
+    "description": "Abbildung von Mengen, die Lokationen zugeordnet sind\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/Energiemenge.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Energiemenge JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/bo/Energiemenge.json>`_",
     "properties": {
         "_id": {
             "anyOf": [
@@ -12,18 +12,20 @@
                 }
             ],
             "default": null,
+            "description": "Hier können IDs anderer Systeme hinterlegt werden (z.B. eine SAP-GP-Nummer oder eine GUID)",
             "title": " Id"
         },
         "_typ": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/enum/Typ.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/enum/Typ.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": "ENERGIEMENGE"
+            "default": "ENERGIEMENGE",
+            "description": "Eindeutige Nummer der Marktlokation bzw. der Messlokation, zu der die Energiemenge gehört"
         },
         "_version": {
             "anyOf": [
@@ -34,14 +36,15 @@
                     "type": "null"
                 }
             ],
-            "default": "202401.0.2",
+            "default": "202401.1.0rc3",
+            "description": "Version der BO-Struktur aka \"fachliche Versionierung\"",
             "title": " Version"
         },
         "energieverbrauch": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/com/Verbrauch.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/com/Verbrauch.json"
                     },
                     "type": "array"
                 },
@@ -50,6 +53,7 @@
                 }
             ],
             "default": null,
+            "description": "Gibt den Verbrauch in einer Zeiteinheit an",
             "title": "Energieverbrauch"
         },
         "lokationsId": {
@@ -62,24 +66,26 @@
                 }
             ],
             "default": null,
+            "description": "Eindeutige Nummer der Marktlokation bzw. der Messlokation, zu der die Energiemenge gehört",
             "title": "Lokationsid"
         },
         "lokationstyp": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/enum/Lokationstyp.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/enum/Lokationstyp.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "description": "Gibt an, ob es sich um eine Markt- oder Messlokation handelt"
         },
         "zusatzAttribute": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/ZusatzAttribut.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/ZusatzAttribut.json"
                     },
                     "type": "array"
                 },

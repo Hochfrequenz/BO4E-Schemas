@@ -1,6 +1,6 @@
 {
     "additionalProperties": true,
-    "description": "Tarifinformation mit Preisen, Aufschlägen und Berechnungssystematik\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/Tarifpreisblatt.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Tarifpreisblatt JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2-/src/bo4e_schemas/bo/Tarifpreisblatt.json>`_",
+    "description": "Tarifinformation mit Preisen, Aufschlägen und Berechnungssystematik\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/Tarifpreisblatt.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Tarifpreisblatt JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/bo/Tarifpreisblatt.json>`_",
     "properties": {
         "_id": {
             "anyOf": [
@@ -12,18 +12,20 @@
                 }
             ],
             "default": null,
+            "description": "Hier können IDs anderer Systeme hinterlegt werden (z.B. eine SAP-GP-Nummer oder eine GUID)",
             "title": " Id"
         },
         "_typ": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/enum/Typ.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/enum/Typ.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": "TARIFPREISBLATT"
+            "default": "TARIFPREISBLATT",
+            "description": "Gibt an, wann der Preis zuletzt angepasst wurde"
         },
         "_version": {
             "anyOf": [
@@ -34,19 +36,21 @@
                     "type": "null"
                 }
             ],
-            "default": "202401.0.2",
+            "default": "202401.1.0rc3",
+            "description": "Version der BO-Struktur aka \"fachliche Versionierung\"",
             "title": " Version"
         },
         "anbieter": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/bo/Marktteilnehmer.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/bo/Marktteilnehmer.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "description": "Der Marktteilnehmer (Lieferant), der diesen Tarif anbietet"
         },
         "anbietername": {
             "anyOf": [
@@ -58,6 +62,7 @@
                 }
             ],
             "default": null,
+            "description": "Der Name des Marktpartners, der den Tarif anbietet",
             "title": "Anbietername"
         },
         "anwendungVon": {
@@ -71,6 +76,7 @@
                 }
             ],
             "default": null,
+            "description": "Angabe des inklusiven Zeitpunkts, ab dem der Tarif bzw. der Preis angewendet und abgerechnet wird,\nz.B. \"2021-07-20T18:31:48Z\"",
             "title": "Anwendungvon"
         },
         "bemerkung": {
@@ -83,18 +89,20 @@
                 }
             ],
             "default": null,
+            "description": "Freitext",
             "title": "Bemerkung"
         },
         "berechnungsparameter": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/com/Tarifberechnungsparameter.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/com/Tarifberechnungsparameter.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "description": "Für die Berechnung der Kosten sind die hier abgebildeten Parameter heranzuziehen"
         },
         "bezeichnung": {
             "anyOf": [
@@ -106,24 +114,26 @@
                 }
             ],
             "default": null,
+            "description": "Name des Tarifs",
             "title": "Bezeichnung"
         },
         "energiemix": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/com/Energiemix.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/com/Energiemix.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "description": "Der Energiemix, der für diesen Tarif gilt"
         },
         "kundentypen": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/enum/Kundentyp.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/enum/Kundentyp.json"
                     },
                     "type": "array"
                 },
@@ -132,18 +142,20 @@
                 }
             ],
             "default": null,
+            "description": "Kundentypen für den der Tarif gilt, z.B. Privatkunden",
             "title": "Kundentypen"
         },
         "preisgarantie": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/com/Preisgarantie.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/com/Preisgarantie.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "description": "Festlegung von Garantien für bestimmte Preisanteile"
         },
         "preisstand": {
             "anyOf": [
@@ -156,35 +168,38 @@
                 }
             ],
             "default": null,
+            "description": "Gibt an, wann der Preis zuletzt angepasst wurde",
             "title": "Preisstand"
         },
         "registeranzahl": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/enum/Registeranzahl.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/enum/Registeranzahl.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "description": "Die Art des Tarifes, z.B. Eintarif oder Mehrtarif"
         },
         "sparte": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/enum/Sparte.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/enum/Sparte.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "description": "Strom oder Gas, etc."
         },
         "tarifAufAbschlaege": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/com/AufAbschlag.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/com/AufAbschlag.json"
                     },
                     "type": "array"
                 },
@@ -193,24 +208,26 @@
                 }
             ],
             "default": null,
+            "description": "Auf- und Abschläge auf die Preise oder Kosten",
             "title": "Tarifaufabschlaege"
         },
         "tarifeinschraenkung": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/com/Tarifeinschraenkung.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/com/Tarifeinschraenkung.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "description": "Die Bedingungen und Einschränkungen unter denen ein Tarif angewendet werden kann"
         },
         "tarifmerkmale": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/enum/Tarifmerkmal.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/enum/Tarifmerkmal.json"
                     },
                     "type": "array"
                 },
@@ -219,13 +236,14 @@
                 }
             ],
             "default": null,
+            "description": "Weitere Merkmale des Tarifs, z.B. Festpreis oder Vorkasse",
             "title": "Tarifmerkmale"
         },
         "tarifpreise": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/com/Tarifpreisposition.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/com/Tarifpreisposition.json"
                     },
                     "type": "array"
                 },
@@ -234,29 +252,32 @@
                 }
             ],
             "default": null,
+            "description": "Die festgelegten Preise, z.B. für Arbeitspreis, Grundpreis etc.",
             "title": "Tarifpreise"
         },
         "tariftyp": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/enum/Tariftyp.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/enum/Tariftyp.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "description": "Hinweis auf den Tariftyp, z.B. Grundversorgung oder Sondertarif"
         },
         "vertragskonditionen": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/com/Vertragskonditionen.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/com/Vertragskonditionen.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "description": "Mindestlaufzeiten und Kündigungsfristen zusammengefasst"
         },
         "website": {
             "anyOf": [
@@ -268,24 +289,26 @@
                 }
             ],
             "default": null,
+            "description": "Internetseite auf dem der Tarif zu finden ist",
             "title": "Website"
         },
         "zeitlicheGueltigkeit": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/com/Zeitraum.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/com/Zeitraum.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "description": "Angabe, in welchem Zeitraum der Tarif gültig ist"
         },
         "zusatzAttribute": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/ZusatzAttribut.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/ZusatzAttribut.json"
                     },
                     "type": "array"
                 },

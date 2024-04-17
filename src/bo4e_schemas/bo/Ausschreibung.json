@@ -1,6 +1,6 @@
 {
     "additionalProperties": true,
-    "description": "Das BO Ausschreibung dient zur detaillierten Darstellung von ausgeschriebenen Energiemengen in der Energiewirtschaft\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/Ausschreibung.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Ausschreibung JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2-/src/bo4e_schemas/bo/Ausschreibung.json>`_",
+    "description": "Das BO Ausschreibung dient zur detaillierten Darstellung von ausgeschriebenen Energiemengen in der Energiewirtschaft\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/Ausschreibung.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Ausschreibung JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/bo/Ausschreibung.json>`_",
     "properties": {
         "_id": {
             "anyOf": [
@@ -12,18 +12,20 @@
                 }
             ],
             "default": null,
+            "description": "Hier können IDs anderer Systeme hinterlegt werden (z.B. eine SAP-GP-Nummer oder eine GUID)",
             "title": " Id"
         },
         "_typ": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/enum/Typ.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/enum/Typ.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": "AUSSCHREIBUNG"
+            "default": "AUSSCHREIBUNG",
+            "description": "Vom Herausgeber der Ausschreibung vergebene eindeutige Nummer"
         },
         "_version": {
             "anyOf": [
@@ -34,41 +36,45 @@
                     "type": "null"
                 }
             ],
-            "default": "202401.0.2",
+            "default": "202401.1.0rc3",
+            "description": "Version der BO-Struktur aka \"fachliche Versionierung\"",
             "title": " Version"
         },
         "abgabefrist": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/com/Zeitraum.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/com/Zeitraum.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "description": "bindefrist: Optional[Zeitraum] = None"
         },
         "ausschreibender": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/bo/Geschaeftspartner.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/bo/Geschaeftspartner.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "description": "abgabefrist: Optional[Zeitraum] = None"
         },
         "ausschreibungportal": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/enum/Ausschreibungsportal.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/enum/Ausschreibungsportal.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "description": "Aufzählung der unterstützten Ausschreibungsportale"
         },
         "ausschreibungsnummer": {
             "anyOf": [
@@ -80,40 +86,44 @@
                 }
             ],
             "default": null,
+            "description": "Vom Herausgeber der Ausschreibung vergebene eindeutige Nummer",
             "title": "Ausschreibungsnummer"
         },
         "ausschreibungsstatus": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/enum/Ausschreibungsstatus.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/enum/Ausschreibungsstatus.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "description": "Bezeichnungen für die Ausschreibungsphasen"
         },
         "ausschreibungstyp": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/enum/Ausschreibungstyp.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/enum/Ausschreibungstyp.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "description": "Aufzählung für die Typisierung von Ausschreibungen"
         },
         "bindefrist": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/com/Zeitraum.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/com/Zeitraum.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "description": "Die einzelnen Lose, aus denen sich die Ausschreibung zusammensetzt"
         },
         "istKostenpflichtig": {
             "anyOf": [
@@ -125,13 +135,14 @@
                 }
             ],
             "default": null,
+            "description": "Kennzeichen, ob die Ausschreibung kostenpflichtig ist",
             "title": "Istkostenpflichtig"
         },
         "lose": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/com/Ausschreibungslos.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/com/Ausschreibungslos.json"
                     },
                     "type": "array"
                 },
@@ -140,6 +151,7 @@
                 }
             ],
             "default": null,
+            "description": "Die einzelnen Lose, aus denen sich die Ausschreibung zusammensetzt",
             "title": "Lose"
         },
         "veroeffentlichungszeitpunkt": {
@@ -153,6 +165,7 @@
                 }
             ],
             "default": null,
+            "description": "Gibt den Veröffentlichungszeitpunkt der Ausschreibung an",
             "title": "Veroeffentlichungszeitpunkt"
         },
         "webseite": {
@@ -165,13 +178,14 @@
                 }
             ],
             "default": null,
+            "description": "Internetseite, auf der die Ausschreibung veröffentlicht wurde (falls vorhanden)",
             "title": "Webseite"
         },
         "zusatzAttribute": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/ZusatzAttribut.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/ZusatzAttribut.json"
                     },
                     "type": "array"
                 },

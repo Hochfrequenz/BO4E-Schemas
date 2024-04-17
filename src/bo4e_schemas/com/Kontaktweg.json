@@ -1,6 +1,6 @@
 {
     "additionalProperties": true,
-    "description": "Mit dieser Komponente können Tarifpreise verschiedener Typen abgebildet werden.\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/com/Tarifpreisposition.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Tarifpreisposition JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/com/Tarifpreisposition.json>`_",
+    "description": "Die Komponente wird dazu verwendet, die Kontaktwege innerhalb des BOs Person darzustellen\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/com/Kontakt.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Kontakt JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/com/Kontakt.json>`_",
     "properties": {
         "_id": {
             "anyOf": [
@@ -28,69 +28,56 @@
             "description": "Version der BO-Struktur aka \"fachliche Versionierung\"",
             "title": " Version"
         },
-        "bezugseinheit": {
+        "beschreibung": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/enum/Mengeneinheit.json"
+                    "type": "string"
                 },
                 {
                     "type": "null"
                 }
             ],
             "default": null,
-            "description": "Größe, auf die sich die Einheit bezieht, beispielsweise kWh, Jahr"
+            "description": "Spezifikation, beispielsweise \"Durchwahl\", \"Sammelnummer\" etc.",
+            "title": "Beschreibung"
         },
-        "einheit": {
+        "istBevorzugterKontaktweg": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/enum/Waehrungseinheit.json"
+                    "type": "boolean"
                 },
                 {
                     "type": "null"
                 }
             ],
             "default": null,
-            "description": "Einheit des Preises (z.B. EURO)"
+            "description": "Gibt an, ob es sich um den bevorzugten Kontaktweg handelt.",
+            "title": "Istbevorzugterkontaktweg"
         },
-        "mengeneinheitstaffel": {
+        "kontaktart": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/enum/Mengeneinheit.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/enum/Kontaktart.json"
                 },
                 {
                     "type": "null"
                 }
             ],
             "default": null,
-            "description": "Gibt an, nach welcher Menge die vorgenannte Einschränkung erfolgt (z.B. Jahresstromverbrauch in kWh)"
+            "description": "Gibt die Kontaktart des Kontaktes an."
         },
-        "preisstaffeln": {
+        "kontaktwert": {
             "anyOf": [
                 {
-                    "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/com/Preisstaffel.json"
-                    },
-                    "type": "array"
+                    "type": "string"
                 },
                 {
                     "type": "null"
                 }
             ],
             "default": null,
-            "description": "Hier sind die Staffeln mit ihren Preisenangaben definiert",
-            "title": "Preisstaffeln"
-        },
-        "preistyp": {
-            "anyOf": [
-                {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/enum/Preistyp.json"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "default": null,
-            "description": "Angabe des Preistypes (z.B. Grundpreis)"
+            "description": "Die Nummer oder E-Mail-Adresse.",
+            "title": "Kontaktwert"
         },
         "zusatzAttribute": {
             "anyOf": [
@@ -108,6 +95,6 @@
             "title": "Zusatzattribute"
         }
     },
-    "title": "Tarifpreisposition",
+    "title": "Kontaktweg",
     "type": "object"
 }

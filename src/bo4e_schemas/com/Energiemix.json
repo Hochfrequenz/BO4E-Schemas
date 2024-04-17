@@ -1,6 +1,6 @@
 {
     "additionalProperties": true,
-    "description": "Zusammensetzung der gelieferten Energie aus den verschiedenen Primärenergieformen.\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/com/Energiemix.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Energiemix JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2-/src/bo4e_schemas/com/Energiemix.json>`_",
+    "description": "Zusammensetzung der gelieferten Energie aus den verschiedenen Primärenergieformen.\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/com/Energiemix.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Energiemix JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/com/Energiemix.json>`_",
     "properties": {
         "_id": {
             "anyOf": [
@@ -12,6 +12,7 @@
                 }
             ],
             "default": null,
+            "description": "zusatz_attribute: Optional[list[ZusatzAttribut]] = None\n\n# pylint: disable=duplicate-code\nmodel_config = ConfigDict(\n    alias_generator=camelize,\n    populate_by_name=True,\n    extra=\"allow\",\n    # json_encoders is deprecated, but there is no easy-to-use alternative. The best way would be to create\n    # an annotated version of Decimal, but you would have to use it everywhere in the pydantic models.\n    # See this issue for more info: https://github.com/pydantic/pydantic/issues/6375\n    json_encoders={Decimal: str},\n)",
             "title": " Id"
         },
         "_version": {
@@ -23,14 +24,15 @@
                     "type": "null"
                 }
             ],
-            "default": "202401.0.2",
+            "default": "202401.1.0rc3",
+            "description": "Version der BO-Struktur aka \"fachliche Versionierung\"",
             "title": " Version"
         },
         "anteil": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/com/Energieherkunft.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/com/Energieherkunft.json"
                     },
                     "type": "array"
                 },
@@ -39,6 +41,7 @@
                 }
             ],
             "default": null,
+            "description": "Anteile der jeweiligen Erzeugungsart",
             "title": "Anteil"
         },
         "atommuell": {
@@ -52,6 +55,7 @@
                 }
             ],
             "default": null,
+            "description": "Höhe des erzeugten Atommülls in g/kWh",
             "title": "Atommuell"
         },
         "bemerkung": {
@@ -64,6 +68,7 @@
                 }
             ],
             "default": null,
+            "description": "Bemerkung zum Energiemix",
             "title": "Bemerkung"
         },
         "bezeichnung": {
@@ -76,6 +81,7 @@
                 }
             ],
             "default": null,
+            "description": "Bezeichnung des Energiemix",
             "title": "Bezeichnung"
         },
         "co2Emission": {
@@ -89,18 +95,20 @@
                 }
             ],
             "default": null,
+            "description": "Höhe des erzeugten CO2-Ausstosses in g/kWh",
             "title": "Co2Emission"
         },
         "energieart": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/enum/Sparte.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/enum/Sparte.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "description": "Strom oder Gas etc."
         },
         "energiemixnummer": {
             "anyOf": [
@@ -112,6 +120,7 @@
                 }
             ],
             "default": null,
+            "description": "Eindeutige Nummer zur Identifizierung des Energiemixes",
             "title": "Energiemixnummer"
         },
         "gueltigkeitsjahr": {
@@ -124,6 +133,7 @@
                 }
             ],
             "default": null,
+            "description": "Jahr, für das der Energiemix gilt",
             "title": "Gueltigkeitsjahr"
         },
         "istInOekoTopTen": {
@@ -136,13 +146,14 @@
                 }
             ],
             "default": null,
+            "description": "Kennzeichen, ob der Versorger zu den Öko Top Ten gehört",
             "title": "Istinoekotopten"
         },
         "oekolabel": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/enum/Oekolabel.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/enum/Oekolabel.json"
                     },
                     "type": "array"
                 },
@@ -151,13 +162,14 @@
                 }
             ],
             "default": null,
+            "description": "Ökolabel für den Energiemix",
             "title": "Oekolabel"
         },
         "oekozertifikate": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/enum/Oekozertifikat.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/enum/Oekozertifikat.json"
                     },
                     "type": "array"
                 },
@@ -166,6 +178,7 @@
                 }
             ],
             "default": null,
+            "description": "Zertifikate für den Energiemix",
             "title": "Oekozertifikate"
         },
         "website": {
@@ -178,13 +191,14 @@
                 }
             ],
             "default": null,
+            "description": "Internetseite, auf der die Strommixdaten veröffentlicht sind",
             "title": "Website"
         },
         "zusatzAttribute": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/ZusatzAttribut.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/ZusatzAttribut.json"
                     },
                     "type": "array"
                 },

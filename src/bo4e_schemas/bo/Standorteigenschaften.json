@@ -1,6 +1,6 @@
 {
     "additionalProperties": true,
-    "description": "Modelliert die regionalen und spartenspezifischen Eigenschaften einer gegebenen Adresse.\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/Standorteigenschaften.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Standorteigenschaften JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2-/src/bo4e_schemas/bo/Standorteigenschaften.json>`_",
+    "description": "Modelliert die regionalen und spartenspezifischen Eigenschaften einer gegebenen Adresse.\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/Standorteigenschaften.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Standorteigenschaften JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/bo/Standorteigenschaften.json>`_",
     "properties": {
         "_id": {
             "anyOf": [
@@ -12,18 +12,20 @@
                 }
             ],
             "default": null,
+            "description": "Hier können IDs anderer Systeme hinterlegt werden (z.B. eine SAP-GP-Nummer oder eine GUID)",
             "title": " Id"
         },
         "_typ": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/enum/Typ.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/enum/Typ.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": "STANDORTEIGENSCHAFTEN"
+            "default": "STANDORTEIGENSCHAFTEN",
+            "description": "Eigenschaften zur Sparte Strom"
         },
         "_version": {
             "anyOf": [
@@ -34,25 +36,27 @@
                     "type": "null"
                 }
             ],
-            "default": "202401.0.2",
+            "default": "202401.1.0rc3",
+            "description": "Version der BO-Struktur aka \"fachliche Versionierung\"",
             "title": " Version"
         },
         "eigenschaftenGas": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/com/StandorteigenschaftenGas.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/com/StandorteigenschaftenGas.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "description": "Eigenschaften zur Sparte Gas"
         },
         "eigenschaftenStrom": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/com/StandorteigenschaftenStrom.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/com/StandorteigenschaftenStrom.json"
                     },
                     "type": "array"
                 },
@@ -61,13 +65,14 @@
                 }
             ],
             "default": null,
+            "description": "Eigenschaften zur Sparte Strom",
             "title": "Eigenschaftenstrom"
         },
         "zusatzAttribute": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/ZusatzAttribut.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/ZusatzAttribut.json"
                     },
                     "type": "array"
                 },

@@ -1,6 +1,6 @@
 {
     "additionalProperties": true,
-    "description": "Diese Komponente wird zur Übertagung der Details zu einer Konzessionsabgabe verwendet.\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/com/Konzessionsabgabe.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Konzessionsabgabe JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2-/src/bo4e_schemas/com/Konzessionsabgabe.json>`_",
+    "description": "Diese Komponente wird zur Übertagung der Details zu einer Konzessionsabgabe verwendet.\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/com/Konzessionsabgabe.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Konzessionsabgabe JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/com/Konzessionsabgabe.json>`_",
     "properties": {
         "_id": {
             "anyOf": [
@@ -12,6 +12,7 @@
                 }
             ],
             "default": null,
+            "description": "zusatz_attribute: Optional[list[ZusatzAttribut]] = None\n\n# pylint: disable=duplicate-code\nmodel_config = ConfigDict(\n    alias_generator=camelize,\n    populate_by_name=True,\n    extra=\"allow\",\n    # json_encoders is deprecated, but there is no easy-to-use alternative. The best way would be to create\n    # an annotated version of Decimal, but you would have to use it everywhere in the pydantic models.\n    # See this issue for more info: https://github.com/pydantic/pydantic/issues/6375\n    json_encoders={Decimal: str},\n)",
             "title": " Id"
         },
         "_version": {
@@ -23,7 +24,8 @@
                     "type": "null"
                 }
             ],
-            "default": "202401.0.2",
+            "default": "202401.1.0rc3",
+            "description": "Version der BO-Struktur aka \"fachliche Versionierung\"",
             "title": " Version"
         },
         "kategorie": {
@@ -36,6 +38,7 @@
                 }
             ],
             "default": null,
+            "description": "Gebührenkategorie der Konzessionsabgabe",
             "title": "Kategorie"
         },
         "kosten": {
@@ -49,24 +52,26 @@
                 }
             ],
             "default": null,
+            "description": "Konzessionsabgabe in E/kWh",
             "title": "Kosten"
         },
         "satz": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/enum/AbgabeArt.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/enum/AbgabeArt.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "description": "Art der Abgabe"
         },
         "zusatzAttribute": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/ZusatzAttribut.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc3/src/bo4e_schemas/ZusatzAttribut.json"
                     },
                     "type": "array"
                 },
