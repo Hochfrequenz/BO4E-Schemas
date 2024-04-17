@@ -191,19 +191,6 @@
             "default": null,
             "description": "Die Adresse, an der die Energie-Lieferung oder -Einspeisung erfolgt"
         },
-        "marktgebiet": {
-            "anyOf": [
-                {
-                    "type": "string"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "default": null,
-            "description": "für Strom. Code vom EIC, https://www.entsoe.eu/data/energy-identification-codes-eic/eic-approved-codes/",
-            "title": "Marktgebiet"
-        },
         "marktlokationsId": {
             "anyOf": [
                 {
@@ -255,19 +242,6 @@
             "description": "Die ID des Gebietes in der ene't-Datenbank",
             "title": "Netzgebietsnr"
         },
-        "regelzone": {
-            "anyOf": [
-                {
-                    "type": "string"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "default": null,
-            "description": "Kundengruppen der Marktlokation",
-            "title": "Regelzone"
-        },
         "sparte": {
             "anyOf": [
                 {
@@ -291,52 +265,6 @@
             ],
             "default": null,
             "description": "Verbrauchsart der Marktlokation."
-        },
-        "verbrauchsmengen": {
-            "anyOf": [
-                {
-                    "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/com/Verbrauch.json"
-                    },
-                    "type": "array"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "default": null,
-            "title": "Verbrauchsmengen"
-        },
-        "zaehlwerke": {
-            "anyOf": [
-                {
-                    "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/com/Zaehlwerk.json"
-                    },
-                    "type": "array"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "default": null,
-            "description": "für Gas. Code vom EIC, https://www.entsog.eu/data/data-portal/codes-list",
-            "title": "Zaehlwerke"
-        },
-        "zaehlwerkeDerBeteiligtenMarktrolle": {
-            "anyOf": [
-                {
-                    "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/com/Zaehlwerk.json"
-                    },
-                    "type": "array"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "default": null,
-            "title": "Zaehlwerkederbeteiligtenmarktrolle"
         },
         "zugehoerigeMesslokation": {
             "anyOf": [
