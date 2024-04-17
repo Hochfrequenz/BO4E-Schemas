@@ -1,6 +1,6 @@
 {
     "additionalProperties": true,
-    "description": "Die Variante des Preisblattmodells zur Abbildung der Netznutzungspreise\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/PreisblattNetznutzung.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `PreisblattNetznutzung JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/bo/PreisblattNetznutzung.json>`_",
+    "description": "Die Variante des Preisblattmodells zur Abbildung der Netznutzungspreise\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/PreisblattNetznutzung.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `PreisblattNetznutzung JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/bo/PreisblattNetznutzung.json>`_",
     "properties": {
         "_id": {
             "anyOf": [
@@ -12,18 +12,20 @@
                 }
             ],
             "default": null,
+            "description": "Hier können IDs anderer Systeme hinterlegt werden (z.B. eine SAP-GP-Nummer oder eine GUID)",
             "title": " Id"
         },
         "_typ": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/enum/Typ.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/enum/Typ.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": "PREISBLATTNETZNUTZUNG"
+            "default": "PREISBLATTNETZNUTZUNG",
+            "description": "Die Preise gelten für Marktlokationen der angebebenen Bilanzierungsmethode"
         },
         "_version": {
             "anyOf": [
@@ -34,7 +36,8 @@
                     "type": "null"
                 }
             ],
-            "default": "202401.1.0rc1",
+            "default": "202401.1.0rc2",
+            "description": "Version der BO-Struktur aka \"fachliche Versionierung\"",
             "title": " Version"
         },
         "bezeichnung": {
@@ -47,45 +50,49 @@
                 }
             ],
             "default": null,
+            "description": "Eine Bezeichnung für das Preisblatt",
             "title": "Bezeichnung"
         },
         "bilanzierungsmethode": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/enum/Bilanzierungsmethode.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/enum/Bilanzierungsmethode.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "description": "Die Preise gelten für Marktlokationen der angebebenen Bilanzierungsmethode"
         },
         "gueltigkeit": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/com/Zeitraum.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/com/Zeitraum.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "description": "Der Zeitraum für den der Preis festgelegt ist"
         },
         "herausgeber": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/bo/Marktteilnehmer.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/bo/Marktteilnehmer.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "description": "Der Netzbetreiber, der die Preise veröffentlicht hat"
         },
         "kundengruppe": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/enum/Kundengruppe.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/enum/Kundengruppe.json"
                 },
                 {
                     "type": "null"
@@ -96,19 +103,20 @@
         "netzebene": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/enum/Netzebene.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/enum/Netzebene.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "description": "Die Preise gelten für Marktlokationen in der angebebenen Netzebene"
         },
         "preispositionen": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/com/Preisposition.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/com/Preisposition.json"
                     },
                     "type": "array"
                 },
@@ -117,35 +125,38 @@
                 }
             ],
             "default": null,
+            "description": "Die einzelnen Positionen, die mit dem Preisblatt abgerechnet werden können. Z.B. Arbeitspreis, Grundpreis etc",
             "title": "Preispositionen"
         },
         "preisstatus": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/enum/Preisstatus.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/enum/Preisstatus.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "description": "Merkmal, das anzeigt, ob es sich um vorläufige oder endgültige Preise handelt"
         },
         "sparte": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/enum/Sparte.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/enum/Sparte.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "description": "Preisblatt gilt für angegebene Sparte"
         },
         "zusatzAttribute": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/ZusatzAttribut.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/ZusatzAttribut.json"
                     },
                     "type": "array"
                 },

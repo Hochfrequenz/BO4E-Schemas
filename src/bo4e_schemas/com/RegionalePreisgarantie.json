@@ -1,6 +1,6 @@
 {
     "additionalProperties": true,
-    "description": "Abbildung einer Preisgarantie mit regionaler Abgrenzung\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/com/RegionalePreisgarantie.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `RegionalePreisgarantie JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/com/RegionalePreisgarantie.json>`_",
+    "description": "Abbildung einer Preisgarantie mit regionaler Abgrenzung\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/com/RegionalePreisgarantie.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `RegionalePreisgarantie JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/com/RegionalePreisgarantie.json>`_",
     "properties": {
         "_id": {
             "anyOf": [
@@ -12,6 +12,7 @@
                 }
             ],
             "default": null,
+            "description": "zusatz_attribute: Optional[list[ZusatzAttribut]] = None\n\n# pylint: disable=duplicate-code\nmodel_config = ConfigDict(\n    alias_generator=camelize,\n    populate_by_name=True,\n    extra=\"allow\",\n    # json_encoders is deprecated, but there is no easy-to-use alternative. The best way would be to create\n    # an annotated version of Decimal, but you would have to use it everywhere in the pydantic models.\n    # See this issue for more info: https://github.com/pydantic/pydantic/issues/6375\n    json_encoders={Decimal: str},\n)",
             "title": " Id"
         },
         "_version": {
@@ -23,7 +24,8 @@
                     "type": "null"
                 }
             ],
-            "default": "202401.1.0rc1",
+            "default": "202401.1.0rc2",
+            "description": "Version der BO-Struktur aka \"fachliche Versionierung\"",
             "title": " Version"
         },
         "beschreibung": {
@@ -36,46 +38,50 @@
                 }
             ],
             "default": null,
+            "description": "Freitext zur Beschreibung der Preisgarantie.",
             "title": "Beschreibung"
         },
         "preisgarantietyp": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/enum/Preisgarantietyp.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/enum/Preisgarantietyp.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "description": "Festlegung, auf welche Preisbestandteile die Garantie gewährt wird."
         },
         "regionaleGueltigkeit": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/com/RegionaleGueltigkeit.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/com/RegionaleGueltigkeit.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "description": "Regionale Eingrenzung der Preisgarantie."
         },
         "zeitlicheGueltigkeit": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/com/Zeitraum.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/com/Zeitraum.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "description": "Freitext zur Beschreibung der Preisgarantie."
         },
         "zusatzAttribute": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/ZusatzAttribut.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/ZusatzAttribut.json"
                     },
                     "type": "array"
                 },

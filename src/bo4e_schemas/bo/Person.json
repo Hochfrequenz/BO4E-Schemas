@@ -1,6 +1,6 @@
 {
     "additionalProperties": true,
-    "description": "Object containing information about a Person\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/Person.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Person JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/bo/Person.json>`_",
+    "description": "Object containing information about a Person\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/Person.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Person JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/bo/Person.json>`_",
     "properties": {
         "_id": {
             "anyOf": [
@@ -12,18 +12,20 @@
                 }
             ],
             "default": null,
+            "description": "Hier können IDs anderer Systeme hinterlegt werden (z.B. eine SAP-GP-Nummer oder eine GUID)",
             "title": " Id"
         },
         "_typ": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/enum/Typ.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/enum/Typ.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": "PERSON"
+            "default": "PERSON",
+            "description": "Mögliche Anrede der Person"
         },
         "_version": {
             "anyOf": [
@@ -34,30 +36,33 @@
                     "type": "null"
                 }
             ],
-            "default": "202401.1.0rc1",
+            "default": "202401.1.0rc2",
+            "description": "Version der BO-Struktur aka \"fachliche Versionierung\"",
             "title": " Version"
         },
         "adresse": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/com/Adresse.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/com/Adresse.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "description": "Adresse der Person, falls diese von der Adresse des Geschäftspartners abweicht"
         },
         "anrede": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/enum/Anrede.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/enum/Anrede.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "description": "Mögliche Anrede der Person"
         },
         "geburtsdatum": {
             "anyOf": [
@@ -70,6 +75,7 @@
                 }
             ],
             "default": null,
+            "description": "Geburtsdatum der Person",
             "title": "Geburtsdatum"
         },
         "individuelleAnrede": {
@@ -82,6 +88,7 @@
                 }
             ],
             "default": null,
+            "description": "Im Falle einer nicht standardisierten Anrede kann hier eine frei definierbare Anrede vorgegeben werden.\nBeispiel: \"Vereinsgemeinschaft\", \"Pfarrer\", \"Hochwürdigster Herr Abt\".",
             "title": "Individuelleanrede"
         },
         "kommentar": {
@@ -94,13 +101,14 @@
                 }
             ],
             "default": null,
+            "description": "Weitere Informationen zur Person",
             "title": "Kommentar"
         },
         "kontaktwege": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/com/Kontaktweg.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/com/Kontaktweg.json"
                     },
                     "type": "array"
                 },
@@ -109,6 +117,7 @@
                 }
             ],
             "default": null,
+            "description": "Kontaktwege der Person",
             "title": "Kontaktwege"
         },
         "nachname": {
@@ -121,18 +130,20 @@
                 }
             ],
             "default": null,
+            "description": "Nachname (Familienname) der Person",
             "title": "Nachname"
         },
         "titel": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/enum/Titel.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/enum/Titel.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "description": "Möglicher Titel der Person"
         },
         "vorname": {
             "anyOf": [
@@ -144,13 +155,14 @@
                 }
             ],
             "default": null,
+            "description": "Vorname der Person",
             "title": "Vorname"
         },
         "zusatzAttribute": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/ZusatzAttribut.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/ZusatzAttribut.json"
                     },
                     "type": "array"
                 },
@@ -165,7 +177,7 @@
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc1/src/bo4e_schemas/com/Zustaendigkeit.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/com/Zustaendigkeit.json"
                     },
                     "type": "array"
                 },
@@ -174,6 +186,7 @@
                 }
             ],
             "default": null,
+            "description": "Liste der Abteilungen und Zuständigkeiten der Person",
             "title": "Zustaendigkeiten"
         }
     },
