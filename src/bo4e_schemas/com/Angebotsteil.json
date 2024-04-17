@@ -1,6 +1,6 @@
 {
     "additionalProperties": true,
-    "description": "Mit dieser Komponente wird ein Teil einer Angebotsvariante abgebildet.\nHier werden alle Angebotspositionen aggregiert.\nAngebotsteile werden im einfachsten Fall für eine Marktlokation oder Lieferstellenadresse erzeugt.\nHier werden die Mengen und Gesamtkosten aller Angebotspositionen zusammengefasst.\nEine Variante besteht mindestens aus einem Angebotsteil.\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/com/Angebotsteil.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Angebotsteil JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/com/Angebotsteil.json>`_",
+    "description": "Mit dieser Komponente wird ein Teil einer Angebotsvariante abgebildet.\nHier werden alle Angebotspositionen aggregiert.\nAngebotsteile werden im einfachsten Fall für eine Marktlokation oder Lieferstellenadresse erzeugt.\nHier werden die Mengen und Gesamtkosten aller Angebotspositionen zusammengefasst.\nEine Variante besteht mindestens aus einem Angebotsteil.\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/com/Angebotsteil.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Angebotsteil JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2-/src/bo4e_schemas/com/Angebotsteil.json>`_",
     "properties": {
         "_id": {
             "anyOf": [
@@ -12,7 +12,6 @@
                 }
             ],
             "default": null,
-            "description": "zusatz_attribute: Optional[list[ZusatzAttribut]] = None\n\n# pylint: disable=duplicate-code\nmodel_config = ConfigDict(\n    alias_generator=camelize,\n    populate_by_name=True,\n    extra=\"allow\",\n    # json_encoders is deprecated, but there is no easy-to-use alternative. The best way would be to create\n    # an annotated version of Decimal, but you would have to use it everywhere in the pydantic models.\n    # See this issue for more info: https://github.com/pydantic/pydantic/issues/6375\n    json_encoders={Decimal: str},\n)",
             "title": " Id"
         },
         "_version": {
@@ -24,8 +23,7 @@
                     "type": "null"
                 }
             ],
-            "default": "202401.1.0rc2",
-            "description": "Version der BO-Struktur aka \"fachliche Versionierung\"",
+            "default": "202401.0.2",
             "title": " Version"
         },
         "anfrageSubreferenz": {
@@ -38,38 +36,35 @@
                 }
             ],
             "default": null,
-            "description": "Identifizierung eines Subkapitels einer Anfrage, beispielsweise das Los einer Ausschreibung",
             "title": "Anfragesubreferenz"
         },
         "gesamtkostenangebotsteil": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/com/Betrag.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/com/Betrag.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Summe der Jahresenergiekosten aller in diesem Angebotsteil enthaltenen Lieferstellen"
+            "default": null
         },
         "gesamtmengeangebotsteil": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/com/Menge.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/com/Menge.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Summe der Verbräuche aller in diesem Angebotsteil eingeschlossenen Lieferstellen"
+            "default": null
         },
         "lieferstellenangebotsteil": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/bo/Marktlokation.json"
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/bo/Marktlokation.json"
                     },
                     "type": "array"
                 },
@@ -78,26 +73,24 @@
                 }
             ],
             "default": null,
-            "description": "Summe der Verbräuche aller in diesem Angebotsteil eingeschlossenen Lieferstellen",
             "title": "Lieferstellenangebotsteil"
         },
         "lieferzeitraum": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/com/Zeitraum.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/com/Zeitraum.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Hier kann der Belieferungszeitraum angegeben werden, für den dieser Angebotsteil gilt"
+            "default": null
         },
         "positionen": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/com/Angebotsposition.json"
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/com/Angebotsposition.json"
                     },
                     "type": "array"
                 },
@@ -106,14 +99,13 @@
                 }
             ],
             "default": null,
-            "description": "Einzelne Positionen, die zu diesem Angebotsteil gehören",
             "title": "Positionen"
         },
         "zusatzAttribute": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/ZusatzAttribut.json"
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/ZusatzAttribut.json"
                     },
                     "type": "array"
                 },

@@ -1,6 +1,6 @@
 {
     "additionalProperties": true,
-    "description": "Mit dieser Komponente können regionale Gültigkeiten, z.B. für Tarife, Zu- und Abschläge und Preise definiert werden.\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/com/RegionaleGueltigkeit.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `RegionaleGueltigkeit JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2-/src/bo4e_schemas/com/RegionaleGueltigkeit.json>`_",
+    "description": "Contains information to call or fax someone\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/com/Rufnummer.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Rufnummer JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2-/src/bo4e_schemas/com/Rufnummer.json>`_",
     "properties": {
         "_id": {
             "anyOf": [
@@ -26,10 +26,10 @@
             "default": "202401.0.2",
             "title": " Version"
         },
-        "gueltigkeitstyp": {
+        "nummerntyp": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/enum/Gueltigkeitstyp.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/enum/Rufnummernart.json"
                 },
                 {
                     "type": "null"
@@ -37,20 +37,17 @@
             ],
             "default": null
         },
-        "kriteriumsWerte": {
+        "rufnummer": {
             "anyOf": [
                 {
-                    "items": {
-                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/com/KriteriumWert.json"
-                    },
-                    "type": "array"
+                    "type": "string"
                 },
                 {
                     "type": "null"
                 }
             ],
             "default": null,
-            "title": "Kriteriumswerte"
+            "title": "Rufnummer"
         },
         "zusatzAttribute": {
             "anyOf": [
@@ -68,6 +65,6 @@
             "title": "Zusatzattribute"
         }
     },
-    "title": "RegionaleGueltigkeit",
+    "title": "Rufnummer",
     "type": "object"
 }

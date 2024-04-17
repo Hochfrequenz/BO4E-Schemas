@@ -1,6 +1,6 @@
 {
     "additionalProperties": true,
-    "description": "Object containing information about a Messlokation\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/Messlokation.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Messlokation JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/bo/Messlokation.json>`_",
+    "description": "Object containing information about a Messlokation\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/Messlokation.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Messlokation JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2-/src/bo4e_schemas/bo/Messlokation.json>`_",
     "properties": {
         "_id": {
             "anyOf": [
@@ -12,20 +12,18 @@
                 }
             ],
             "default": null,
-            "description": "Hier können IDs anderer Systeme hinterlegt werden (z.B. eine SAP-GP-Nummer oder eine GUID)",
             "title": " Id"
         },
         "_typ": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/enum/Typ.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/enum/Typ.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": "MESSLOKATION",
-            "description": "Die Messlokations-Identifikation; Das ist die frühere Zählpunktbezeichnung"
+            "default": "MESSLOKATION"
         },
         "_version": {
             "anyOf": [
@@ -36,27 +34,25 @@
                     "type": "null"
                 }
             ],
-            "default": "202401.1.0rc2",
-            "description": "Version der BO-Struktur aka \"fachliche Versionierung\"",
+            "default": "202401.0.2",
             "title": " Version"
         },
         "geoadresse": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/com/Geokoordinaten.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/com/Geokoordinaten.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "katasterinformation: Optional[Katasteradresse] = None"
+            "default": null
         },
         "geraete": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/bo/Geraet.json"
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/bo/Geraet.json"
                     },
                     "type": "array"
                 },
@@ -65,7 +61,6 @@
                 }
             ],
             "default": null,
-            "description": "Liste der Geräte, die zu dieser Messstelle gehört",
             "title": "Geraete"
         },
         "grundzustaendigerMsbCodenr": {
@@ -78,7 +73,6 @@
                 }
             ],
             "default": null,
-            "description": "grundzustaendiger_msbim_codenr: Optional[str] = None",
             "title": "Grundzustaendigermsbcodenr"
         },
         "grundzustaendigerMsbimCodenr": {
@@ -91,38 +85,35 @@
                 }
             ],
             "default": null,
-            "description": "# only one of the following three optional address attributes can be set\nmessadresse: Optional[Adresse] = None",
             "title": "Grundzustaendigermsbimcodenr"
         },
         "katasterinformation": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/com/Katasteradresse.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/com/Katasteradresse.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Alternativ zu einer postalischen Adresse und Geokoordinaten kann hier eine Ortsangabe mittels Gemarkung und\nFlurstück erfolgen."
+            "default": null
         },
         "messadresse": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/com/Adresse.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/com/Adresse.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "geoadresse: Optional[Geokoordinaten] = None"
+            "default": null
         },
         "messdienstleistung": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/com/Dienstleistung.json"
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/com/Dienstleistung.json"
                     },
                     "type": "array"
                 },
@@ -131,7 +122,6 @@
                 }
             ],
             "default": null,
-            "description": "Liste der Messdienstleistungen, die zu dieser Messstelle gehört",
             "title": "Messdienstleistung"
         },
         "messgebietnr": {
@@ -144,7 +134,6 @@
                 }
             ],
             "default": null,
-            "description": "Die Nummer des Messgebietes in der ene't-Datenbank",
             "title": "Messgebietnr"
         },
         "messlokationsId": {
@@ -157,14 +146,13 @@
                 }
             ],
             "default": null,
-            "description": "Die Messlokations-Identifikation; Das ist die frühere Zählpunktbezeichnung",
             "title": "Messlokationsid"
         },
         "messlokationszaehler": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/bo/Zaehler.json"
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/bo/Zaehler.json"
                     },
                     "type": "array"
                 },
@@ -173,38 +161,35 @@
                 }
             ],
             "default": null,
-            "description": "Zähler, die zu dieser Messlokation gehören",
             "title": "Messlokationszaehler"
         },
         "netzebeneMessung": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/enum/Netzebene.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/enum/Netzebene.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Spannungsebene der Messung"
+            "default": null
         },
         "sparte": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/enum/Sparte.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/enum/Sparte.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Sparte der Messlokation, z.B. Gas oder Strom"
+            "default": null
         },
         "zusatzAttribute": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/ZusatzAttribut.json"
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/ZusatzAttribut.json"
                     },
                     "type": "array"
                 },

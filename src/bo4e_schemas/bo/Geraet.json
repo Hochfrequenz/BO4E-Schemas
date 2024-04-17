@@ -1,6 +1,6 @@
 {
     "additionalProperties": true,
-    "description": "Mit diesem BO werden alle Geräte modelliert, die keine Zähler sind.\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/Geraet.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Geraet JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/bo/Geraet.json>`_",
+    "description": "Mit diesem BO werden alle Geräte modelliert, die keine Zähler sind.\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/Geraet.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Geraet JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2-/src/bo4e_schemas/bo/Geraet.json>`_",
     "properties": {
         "_id": {
             "anyOf": [
@@ -12,20 +12,18 @@
                 }
             ],
             "default": null,
-            "description": "Hier können IDs anderer Systeme hinterlegt werden (z.B. eine SAP-GP-Nummer oder eine GUID)",
             "title": " Id"
         },
         "_typ": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/enum/Typ.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/enum/Typ.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": "GERAET",
-            "description": "Die auf dem Gerät aufgedruckte Nummer, die vom MSB vergeben wird."
+            "default": "GERAET"
         },
         "_version": {
             "anyOf": [
@@ -36,8 +34,7 @@
                     "type": "null"
                 }
             ],
-            "default": "202401.1.0rc2",
-            "description": "Version der BO-Struktur aka \"fachliche Versionierung\"",
+            "default": "202401.0.2",
             "title": " Version"
         },
         "bezeichnung": {
@@ -50,20 +47,18 @@
                 }
             ],
             "default": null,
-            "description": "Bezeichnung des Geräts",
             "title": "Bezeichnung"
         },
         "geraeteklasse": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/enum/Geraeteklasse.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/enum/Geraeteklasse.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Die übergreifende Klasse eines Geräts, beispielsweise Wandler"
+            "default": null
         },
         "geraetenummer": {
             "anyOf": [
@@ -75,26 +70,24 @@
                 }
             ],
             "default": null,
-            "description": "Die auf dem Gerät aufgedruckte Nummer, die vom MSB vergeben wird.",
             "title": "Geraetenummer"
         },
         "geraetetyp": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/enum/Geraetetyp.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/enum/Geraetetyp.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Der speziellere Typ eines Gerätes, beispielsweise Stromwandler"
+            "default": null
         },
         "zusatzAttribute": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/ZusatzAttribut.json"
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/ZusatzAttribut.json"
                     },
                     "type": "array"
                 },

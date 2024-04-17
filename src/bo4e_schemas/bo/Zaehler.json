@@ -1,6 +1,6 @@
 {
     "additionalProperties": true,
-    "description": "Object containing information about a meter/\"Zaehler\".\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/Zaehler.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Zaehler JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/bo/Zaehler.json>`_",
+    "description": "Object containing information about a meter/\"Zaehler\".\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/Zaehler.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Zaehler JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2-/src/bo4e_schemas/bo/Zaehler.json>`_",
     "properties": {
         "_id": {
             "anyOf": [
@@ -12,20 +12,18 @@
                 }
             ],
             "default": null,
-            "description": "Hier können IDs anderer Systeme hinterlegt werden (z.B. eine SAP-GP-Nummer oder eine GUID)",
             "title": " Id"
         },
         "_typ": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/enum/Typ.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/enum/Typ.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": "ZAEHLER",
-            "description": "Typisierung des Zählers"
+            "default": "ZAEHLER"
         },
         "_version": {
             "anyOf": [
@@ -36,21 +34,19 @@
                     "type": "null"
                 }
             ],
-            "default": "202401.1.0rc2",
-            "description": "Version der BO-Struktur aka \"fachliche Versionierung\"",
+            "default": "202401.0.2",
             "title": " Version"
         },
         "befestigungsart": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/enum/Befestigungsart.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/enum/Befestigungsart.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Besondere Spezifikation des Zählers"
+            "default": null
         },
         "eichungBis": {
             "anyOf": [
@@ -63,14 +59,13 @@
                 }
             ],
             "default": null,
-            "description": "Zählerkonstante auf dem Zähler",
             "title": "Eichungbis"
         },
         "geraete": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/bo/Geraet.json"
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/bo/Geraet.json"
                     },
                     "type": "array"
                 },
@@ -79,7 +74,6 @@
                 }
             ],
             "default": null,
-            "description": "Größe des Zählers",
             "title": "Geraete"
         },
         "istFernschaltbar": {
@@ -92,7 +86,6 @@
                 }
             ],
             "default": null,
-            "description": "Der Hersteller des Zählers",
             "title": "Istfernschaltbar"
         },
         "letzteEichung": {
@@ -106,80 +99,73 @@
                 }
             ],
             "default": null,
-            "description": "Bis zu diesem Datum (exklusiv) ist der Zähler geeicht.",
             "title": "Letzteeichung"
         },
         "messwerterfassung": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/enum/Messwerterfassung.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/enum/Messwerterfassung.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Fernschaltung"
+            "default": null
         },
         "registeranzahl": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/enum/Registeranzahl.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/enum/Registeranzahl.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Spezifikation bezüglich unterstützter Tarif"
+            "default": null
         },
         "sparte": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/enum/Sparte.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/enum/Sparte.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Nummerierung des Zählers,vergeben durch den Messstellenbetreiber"
+            "default": null
         },
         "zaehlerauspraegung": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/enum/Zaehlerauspraegung.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/enum/Zaehlerauspraegung.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Strom oder Gas"
+            "default": null
         },
         "zaehlergroesse": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/enum/Zaehlergroesse.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/enum/Zaehlergroesse.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Befestigungsart"
+            "default": null
         },
         "zaehlerhersteller": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/bo/Geschaeftspartner.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/bo/Geschaeftspartner.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Zu diesem Datum fand die letzte Eichprüfung des Zählers statt."
+            "default": null
         },
         "zaehlerkonstante": {
             "anyOf": [
@@ -192,7 +178,6 @@
                 }
             ],
             "default": null,
-            "description": "Spezifikation bezüglich unterstützter Tarif",
             "title": "Zaehlerkonstante"
         },
         "zaehlernummer": {
@@ -205,38 +190,35 @@
                 }
             ],
             "default": null,
-            "description": "Nummerierung des Zählers,vergeben durch den Messstellenbetreiber",
             "title": "Zaehlernummer"
         },
         "zaehlertyp": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/enum/Zaehlertyp.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/enum/Zaehlertyp.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Spezifikation die Richtung des Zählers betreffend"
+            "default": null
         },
         "zaehlertypSpezifikation": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/enum/ZaehlertypSpezifikation.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/enum/ZaehlertypSpezifikation.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Messwerterfassung des Zählers"
+            "default": null
         },
         "zaehlwerke": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/com/Zaehlwerk.json"
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/com/Zaehlwerk.json"
                     },
                     "type": "array"
                 },
@@ -245,14 +227,13 @@
                 }
             ],
             "default": null,
-            "description": "Typisierung des Zählers",
             "title": "Zaehlwerke"
         },
         "zusatzAttribute": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/ZusatzAttribut.json"
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/ZusatzAttribut.json"
                     },
                     "type": "array"
                 },

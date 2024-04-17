@@ -1,6 +1,6 @@
 {
     "additionalProperties": true,
-    "description": "Object containing information about a Person\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/Person.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Person JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/bo/Person.json>`_",
+    "description": "Object containing information about a Ansprechpartner\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/Ansprechpartner.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Ansprechpartner JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2-/src/bo4e_schemas/bo/Ansprechpartner.json>`_",
     "properties": {
         "_id": {
             "anyOf": [
@@ -12,20 +12,18 @@
                 }
             ],
             "default": null,
-            "description": "Hier können IDs anderer Systeme hinterlegt werden (z.B. eine SAP-GP-Nummer oder eine GUID)",
             "title": " Id"
         },
         "_typ": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/enum/Typ.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/enum/Typ.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": "PERSON",
-            "description": "Mögliche Anrede der Person"
+            "default": "ANSPRECHPARTNER"
         },
         "_version": {
             "anyOf": [
@@ -36,38 +34,34 @@
                     "type": "null"
                 }
             ],
-            "default": "202401.1.0rc2",
-            "description": "Version der BO-Struktur aka \"fachliche Versionierung\"",
+            "default": "202401.0.2",
             "title": " Version"
         },
         "adresse": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/com/Adresse.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/com/Adresse.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Adresse der Person, falls diese von der Adresse des Geschäftspartners abweicht"
+            "default": null
         },
         "anrede": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/enum/Anrede.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/enum/Anrede.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Mögliche Anrede der Person"
+            "default": null
         },
-        "geburtsdatum": {
+        "eMailAdresse": {
             "anyOf": [
                 {
-                    "format": "date-time",
                     "type": "string"
                 },
                 {
@@ -75,8 +69,18 @@
                 }
             ],
             "default": null,
-            "description": "Geburtsdatum der Person",
-            "title": "Geburtsdatum"
+            "title": "Emailadresse"
+        },
+        "geschaeftspartner": {
+            "anyOf": [
+                {
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/bo/Geschaeftspartner.json"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null
         },
         "individuelleAnrede": {
             "anyOf": [
@@ -88,7 +92,6 @@
                 }
             ],
             "default": null,
-            "description": "Im Falle einer nicht standardisierten Anrede kann hier eine frei definierbare Anrede vorgegeben werden.\nBeispiel: \"Vereinsgemeinschaft\", \"Pfarrer\", \"Hochwürdigster Herr Abt\".",
             "title": "Individuelleanrede"
         },
         "kommentar": {
@@ -101,24 +104,7 @@
                 }
             ],
             "default": null,
-            "description": "Weitere Informationen zur Person",
             "title": "Kommentar"
-        },
-        "kontaktwege": {
-            "anyOf": [
-                {
-                    "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/com/Kontaktweg.json"
-                    },
-                    "type": "array"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "default": null,
-            "description": "Kontaktwege der Person",
-            "title": "Kontaktwege"
         },
         "nachname": {
             "anyOf": [
@@ -130,20 +116,29 @@
                 }
             ],
             "default": null,
-            "description": "Nachname (Familienname) der Person",
             "title": "Nachname"
         },
-        "titel": {
+        "rufnummer": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/enum/Titel.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/com/Rufnummer.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Möglicher Titel der Person"
+            "default": null
+        },
+        "titel": {
+            "anyOf": [
+                {
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/enum/Titel.json"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null
         },
         "vorname": {
             "anyOf": [
@@ -155,14 +150,13 @@
                 }
             ],
             "default": null,
-            "description": "Vorname der Person",
             "title": "Vorname"
         },
         "zusatzAttribute": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/ZusatzAttribut.json"
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/ZusatzAttribut.json"
                     },
                     "type": "array"
                 },
@@ -173,23 +167,18 @@
             "default": null,
             "title": "Zusatzattribute"
         },
-        "zustaendigkeiten": {
+        "zustaendigkeit": {
             "anyOf": [
                 {
-                    "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.0-rc2/src/bo4e_schemas/com/Zustaendigkeit.json"
-                    },
-                    "type": "array"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.2/src/bo4e_schemas/com/Zustaendigkeit.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Liste der Abteilungen und Zuständigkeiten der Person",
-            "title": "Zustaendigkeiten"
+            "default": null
         }
     },
-    "title": "Person",
+    "title": "Ansprechpartner",
     "type": "object"
 }
