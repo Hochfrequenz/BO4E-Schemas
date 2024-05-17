@@ -1,6 +1,6 @@
 {
     "additionalProperties": true,
-    "description": "Object containing information about a Marktlokation\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/Marktlokation.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Marktlokation JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.2-rc15/src/bo4e_schemas/bo/Marktlokation.json>`_",
+    "description": "Object containing information about a Marktlokation\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/Marktlokation.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Marktlokation JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.1/src/bo4e_schemas/bo/Marktlokation.json>`_",
     "properties": {
         "_id": {
             "anyOf": [
@@ -18,7 +18,7 @@
         "_typ": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.2-rc15/src/bo4e_schemas/enum/Typ.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.1/src/bo4e_schemas/enum/Typ.json"
                 },
                 {
                     "type": "null"
@@ -36,7 +36,7 @@
                     "type": "null"
                 }
             ],
-            "default": "202401.1.2rc15",
+            "default": "202401.1.1",
             "description": "Version der BO-Struktur aka \"fachliche Versionierung\"",
             "title": " Version"
         },
@@ -56,7 +56,7 @@
         "bilanzierungsmethode": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.2-rc15/src/bo4e_schemas/enum/Bilanzierungsmethode.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.1/src/bo4e_schemas/enum/Bilanzierungsmethode.json"
                 },
                 {
                     "type": "null"
@@ -68,7 +68,7 @@
         "endkunde": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.2-rc15/src/bo4e_schemas/bo/Geschaeftspartner.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.1/src/bo4e_schemas/bo/Geschaeftspartner.json"
                 },
                 {
                     "type": "null"
@@ -80,7 +80,7 @@
         "energierichtung": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.2-rc15/src/bo4e_schemas/enum/Energierichtung.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.1/src/bo4e_schemas/enum/Energierichtung.json"
                 },
                 {
                     "type": "null"
@@ -92,7 +92,7 @@
         "gasqualitaet": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.2-rc15/src/bo4e_schemas/enum/Gasqualitaet.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.1/src/bo4e_schemas/enum/Gasqualitaet.json"
                 },
                 {
                     "type": "null"
@@ -104,7 +104,7 @@
         "gebietstyp": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.2-rc15/src/bo4e_schemas/enum/Gebiettyp.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.1/src/bo4e_schemas/enum/Gebiettyp.json"
                 },
                 {
                     "type": "null"
@@ -116,14 +116,14 @@
         "geoadresse": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.2-rc15/src/bo4e_schemas/com/Geokoordinaten.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.1/src/bo4e_schemas/com/Geokoordinaten.json"
                 },
                 {
                     "type": "null"
                 }
             ],
             "default": null,
-            "description": "katasterinformation: Optional[\"Katasteradresse\"] = None"
+            "description": "katasterinformation: Optional[Katasteradresse] = None"
         },
         "grundversorgercodenr": {
             "anyOf": [
@@ -154,7 +154,7 @@
         "katasterinformation": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.2-rc15/src/bo4e_schemas/com/Katasteradresse.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.1/src/bo4e_schemas/com/Katasteradresse.json"
                 },
                 {
                     "type": "null"
@@ -167,7 +167,7 @@
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.2-rc15/src/bo4e_schemas/enum/Kundentyp.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.1/src/bo4e_schemas/enum/Kundentyp.json"
                     },
                     "type": "array"
                 },
@@ -182,7 +182,7 @@
         "lokationsadresse": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.2-rc15/src/bo4e_schemas/com/Adresse.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.1/src/bo4e_schemas/com/Adresse.json"
                 },
                 {
                     "type": "null"
@@ -201,7 +201,7 @@
                 }
             ],
             "default": null,
-            "description": "für Gas. Code vom EIC, https://www.entsog.eu/data/data-portal/codes-list",
+            "description": "für Strom. Code vom EIC, https://www.entsoe.eu/data/energy-identification-codes-eic/eic-approved-codes/",
             "title": "Marktgebiet"
         },
         "marktlokationsId": {
@@ -233,7 +233,7 @@
         "netzebene": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.2-rc15/src/bo4e_schemas/enum/Netzebene.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.1/src/bo4e_schemas/enum/Netzebene.json"
                 },
                 {
                     "type": "null"
@@ -271,7 +271,7 @@
         "sparte": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.2-rc15/src/bo4e_schemas/enum/Sparte.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.1/src/bo4e_schemas/enum/Sparte.json"
                 },
                 {
                     "type": "null"
@@ -283,7 +283,7 @@
         "verbrauchsart": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.2-rc15/src/bo4e_schemas/enum/Verbrauchsart.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.1/src/bo4e_schemas/enum/Verbrauchsart.json"
                 },
                 {
                     "type": "null"
@@ -296,7 +296,7 @@
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.2-rc15/src/bo4e_schemas/com/Verbrauch.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.1/src/bo4e_schemas/com/Verbrauch.json"
                     },
                     "type": "array"
                 },
@@ -311,7 +311,7 @@
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.2-rc15/src/bo4e_schemas/com/Zaehlwerk.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.1/src/bo4e_schemas/com/Zaehlwerk.json"
                     },
                     "type": "array"
                 },
@@ -327,7 +327,7 @@
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.2-rc15/src/bo4e_schemas/com/Zaehlwerk.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.1/src/bo4e_schemas/com/Zaehlwerk.json"
                     },
                     "type": "array"
                 },
@@ -341,7 +341,7 @@
         "zugehoerigeMesslokation": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.2-rc15/src/bo4e_schemas/com/Messlokationszuordnung.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.1/src/bo4e_schemas/com/Messlokationszuordnung.json"
                 },
                 {
                     "type": "null"
@@ -353,7 +353,7 @@
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.2-rc15/src/bo4e_schemas/ZusatzAttribut.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.1.1/src/bo4e_schemas/ZusatzAttribut.json"
                     },
                     "type": "array"
                 },

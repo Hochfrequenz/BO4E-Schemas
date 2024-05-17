@@ -21,10 +21,7 @@
         "HALBJAHR",
         "JAHR",
         "PROZENT",
-        "KVAR",
-        "KWHK",
-        "VAR",
-        "VARH"
+        "KVAR"
     ],
     "title": "Mengeneinheit",
     "type": "string"
