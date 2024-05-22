@@ -1,6 +1,6 @@
 {
     "additionalProperties": true,
-    "description": "Abbildung einer Menge mit Wert und Einheit.\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/com/Menge.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Menge JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/com/Menge.json>`_",
+    "description": "base class for all components\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/com/COM.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `COM JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/com/COM.json>`_",
     "properties": {
         "_id": {
             "anyOf": [
@@ -26,30 +26,6 @@
             "default": "202401.0.1.1",
             "title": " Version"
         },
-        "einheit": {
-            "anyOf": [
-                {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/enum/Mengeneinheit.json"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "default": null
-        },
-        "wert": {
-            "anyOf": [
-                {
-                    "format": "decimal",
-                    "type": "string"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "default": null,
-            "title": "Wert"
-        },
         "zusatzAttribute": {
             "anyOf": [
                 {
@@ -66,6 +42,6 @@
             "title": "Zusatzattribute"
         }
     },
-    "title": "Menge",
+    "title": "COM",
     "type": "object"
 }

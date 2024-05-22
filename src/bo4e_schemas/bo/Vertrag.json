@@ -1,6 +1,6 @@
 {
     "additionalProperties": true,
-    "description": "Modell für die Abbildung von Vertragsbeziehungen;\nDas Objekt dient dazu, alle Arten von Verträgen, die in der Energiewirtschaft Verwendung finden, abzubilden.\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/Vertrag.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Vertrag JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/bo/Vertrag.json>`_",
+    "description": "Modell für die Abbildung von Vertragsbeziehungen;\nDas Objekt dient dazu, alle Arten von Verträgen, die in der Energiewirtschaft Verwendung finden, abzubilden.\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/Vertrag.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Vertrag JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/bo/Vertrag.json>`_",
     "properties": {
         "_id": {
             "anyOf": [
@@ -12,20 +12,18 @@
                 }
             ],
             "default": null,
-            "description": "Hier können IDs anderer Systeme hinterlegt werden (z.B. eine SAP-GP-Nummer oder eine GUID)",
             "title": " Id"
         },
         "_typ": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/enum/Typ.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/enum/Typ.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": "VERTRAG",
-            "description": "Der Typ des Geschäftsobjektes"
+            "default": "VERTRAG"
         },
         "_version": {
             "anyOf": [
@@ -36,8 +34,7 @@
                     "type": "null"
                 }
             ],
-            "default": "202401.2.0",
-            "description": "Version der BO-Struktur aka \"fachliche Versionierung\"",
+            "default": "202401.0.1.1",
             "title": " Version"
         },
         "beschreibung": {
@@ -50,26 +47,24 @@
                 }
             ],
             "default": null,
-            "description": "Beschreibung zum Vertrag",
             "title": "Beschreibung"
         },
         "sparte": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/enum/Sparte.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/enum/Sparte.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Unterscheidungsmöglichkeiten für die Sparte"
+            "default": null
         },
         "unterzeichnervp1": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/com/Unterschrift.json"
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/com/Unterschrift.json"
                     },
                     "type": "array"
                 },
@@ -78,14 +73,13 @@
                 }
             ],
             "default": null,
-            "description": "Unterzeichner des Vertragspartners 1",
             "title": "Unterzeichnervp1"
         },
         "unterzeichnervp2": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/com/Unterschrift.json"
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/com/Unterschrift.json"
                     },
                     "type": "array"
                 },
@@ -94,20 +88,18 @@
                 }
             ],
             "default": null,
-            "description": "Unterzeichner des Vertragspartners 2",
             "title": "Unterzeichnervp2"
         },
         "vertragsart": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/enum/Vertragsart.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/enum/Vertragsart.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Hier ist festgelegt, um welche Art von Vertrag es sich handelt."
+            "default": null
         },
         "vertragsbeginn": {
             "anyOf": [
@@ -120,7 +112,6 @@
                 }
             ],
             "default": null,
-            "description": "Gibt an, wann der Vertrag beginnt (inklusiv)",
             "title": "Vertragsbeginn"
         },
         "vertragsende": {
@@ -134,20 +125,18 @@
                 }
             ],
             "default": null,
-            "description": "Gibt an, wann der Vertrag (voraussichtlich) endet oder beendet wurde (exklusiv)",
             "title": "Vertragsende"
         },
         "vertragskonditionen": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/com/Vertragskonditionen.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/com/Vertragskonditionen.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Festlegungen zu Laufzeiten und Kündigungsfristen"
+            "default": null
         },
         "vertragsnummer": {
             "anyOf": [
@@ -159,50 +148,46 @@
                 }
             ],
             "default": null,
-            "description": "Eine im Verwendungskontext eindeutige Nummer für den Vertrag",
             "title": "Vertragsnummer"
         },
         "vertragspartner1": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/bo/Geschaeftspartner.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/bo/Geschaeftspartner.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Der \"erstgenannte\" Vertragspartner.\nIn der Regel der Aussteller des Vertrags.\nBeispiel: \"Vertrag zwischen Vertragspartner 1 ...\""
+            "default": null
         },
         "vertragspartner2": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/bo/Geschaeftspartner.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/bo/Geschaeftspartner.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "vertragsteile: Optional[list[\"Vertragsteil\"]] = None"
+            "default": null
         },
         "vertragsstatus": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/enum/Vertragsstatus.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/enum/Vertragsstatus.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Gibt den Status des Vertrags an"
+            "default": null
         },
         "vertragsteile": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/com/Vertragsteil.json"
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/com/Vertragsteil.json"
                     },
                     "type": "array"
                 },
@@ -211,14 +196,13 @@
                 }
             ],
             "default": null,
-            "description": "Beschreibung zum Vertrag",
             "title": "Vertragsteile"
         },
         "zusatzAttribute": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/ZusatzAttribut.json"
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/ZusatzAttribut.json"
                     },
                     "type": "array"
                 },

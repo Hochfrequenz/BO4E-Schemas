@@ -1,6 +1,6 @@
 {
     "additionalProperties": true,
-    "description": "Eine Kostenposition im Bereich der Fremdkosten\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/com/Fremdkostenposition.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Fremdkostenposition JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/com/Fremdkostenposition.json>`_",
+    "description": "Eine Kostenposition im Bereich der Fremdkosten\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/com/Fremdkostenposition.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Fremdkostenposition JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/com/Fremdkostenposition.json>`_",
     "properties": {
         "_id": {
             "anyOf": [
@@ -12,7 +12,6 @@
                 }
             ],
             "default": null,
-            "description": "zusatz_attribute: Optional[list[\"ZusatzAttribut\"]] = None\n\n# pylint: disable=duplicate-code\nmodel_config = ConfigDict(\n    alias_generator=camelize,\n    populate_by_name=True,\n    extra=\"allow\",\n    # json_encoders is deprecated, but there is no easy-to-use alternative. The best way would be to create\n    # an annotated version of Decimal, but you would have to use it everywhere in the pydantic models.\n    # See this issue for more info: https://github.com/pydantic/pydantic/issues/6375\n    json_encoders={Decimal: str},\n)",
             "title": " Id"
         },
         "_version": {
@@ -24,8 +23,7 @@
                     "type": "null"
                 }
             ],
-            "default": "202401.2.0",
-            "description": "Version der BO-Struktur aka \"fachliche Versionierung\"",
+            "default": "202401.0.1.1",
             "title": " Version"
         },
         "artikelbezeichnung": {
@@ -38,7 +36,6 @@
                 }
             ],
             "default": null,
-            "description": "Bezeichnung für den Artikel für den die Kosten ermittelt wurden. Beispiel: Arbeitspreis HT",
             "title": "Artikelbezeichnung"
         },
         "artikeldetail": {
@@ -51,20 +48,18 @@
                 }
             ],
             "default": null,
-            "description": "Detaillierung des Artikels (optional). Beispiel: 'Drehstromzähler'",
             "title": "Artikeldetail"
         },
         "betragKostenposition": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/com/Betrag.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/com/Betrag.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Der errechnete Gesamtbetrag der Position als Ergebnis der Berechnung <Menge * Einzelpreis> oder\n<Einzelpreis / (Anzahl Tage Jahr) * zeitmenge>"
+            "default": null
         },
         "bis": {
             "anyOf": [
@@ -77,20 +72,18 @@
                 }
             ],
             "default": null,
-            "description": "exklusiver bis-Zeitpunkt der Kostenzeitscheibe",
             "title": "Bis"
         },
         "einzelpreis": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/com/Preis.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/com/Preis.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Der Preis für eine Einheit. Beispiele: 5,8200 ct/kWh oder 55 €/Jahr."
+            "default": null
         },
         "gebietcodeEic": {
             "anyOf": [
@@ -102,7 +95,6 @@
                 }
             ],
             "default": null,
-            "description": "EIC-Code des Regel- oder Marktgebietes eingetragen. Z.B. '10YDE-EON------1' für die Regelzone TenneT",
             "title": "Gebietcodeeic"
         },
         "linkPreisblatt": {
@@ -115,7 +107,6 @@
                 }
             ],
             "default": null,
-            "description": "Link zum veröffentlichten Preisblatt",
             "title": "Linkpreisblatt"
         },
         "marktpartnercode": {
@@ -128,7 +119,6 @@
                 }
             ],
             "default": null,
-            "description": "Die Codenummer (z.B. BDEW-Codenummer) des Marktpartners, der die Preise festlegt / die Kosten in Rechnung stellt",
             "title": "Marktpartnercode"
         },
         "marktpartnername": {
@@ -141,20 +131,18 @@
                 }
             ],
             "default": null,
-            "description": "Der Name des Marktpartners, der die Preise festlegt, bzw. die Kosten in Rechnung stellt",
             "title": "Marktpartnername"
         },
         "menge": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/com/Menge.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/com/Menge.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Die Menge, die in die Kostenberechnung eingeflossen ist. Beispiel: 3.660 kWh"
+            "default": null
         },
         "positionstitel": {
             "anyOf": [
@@ -166,7 +154,6 @@
                 }
             ],
             "default": null,
-            "description": "Ein Titel für die Zeile. Hier kann z.B. der Netzbetreiber eingetragen werden, wenn es sich um Netzkosten handelt.",
             "title": "Positionstitel"
         },
         "von": {
@@ -180,26 +167,24 @@
                 }
             ],
             "default": null,
-            "description": "inklusiver von-Zeitpunkt der Kostenzeitscheibe",
             "title": "Von"
         },
         "zeitmenge": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/com/Menge.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/com/Menge.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Detaillierung des Artikels (optional). Beispiel: 'Drehstromzähler'"
+            "default": null
         },
         "zusatzAttribute": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/ZusatzAttribut.json"
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/ZusatzAttribut.json"
                     },
                     "type": "array"
                 },

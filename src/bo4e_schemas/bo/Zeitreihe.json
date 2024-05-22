@@ -1,6 +1,6 @@
 {
     "additionalProperties": true,
-    "description": "Abbildung einer allgemeinen Zeitreihe mit einem Wertvektor.\nDie Werte können mit wahlfreier zeitlicher Distanz im Vektor abgelegt sein.\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/Zeitreihe.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Zeitreihe JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/bo/Zeitreihe.json>`_",
+    "description": "Abbildung einer allgemeinen Zeitreihe mit einem Wertvektor.\nDie Werte können mit wahlfreier zeitlicher Distanz im Vektor abgelegt sein.\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/Zeitreihe.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Zeitreihe JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/bo/Zeitreihe.json>`_",
     "properties": {
         "_id": {
             "anyOf": [
@@ -12,20 +12,18 @@
                 }
             ],
             "default": null,
-            "description": "Hier können IDs anderer Systeme hinterlegt werden (z.B. eine SAP-GP-Nummer oder eine GUID)",
             "title": " Id"
         },
         "_typ": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/enum/Typ.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/enum/Typ.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": "ZEITREIHE",
-            "description": "Bezeichnung für die Zeitreihe"
+            "default": "ZEITREIHE"
         },
         "beschreibung": {
             "anyOf": [
@@ -37,7 +35,6 @@
                 }
             ],
             "default": null,
-            "description": "Beschreibt die Verwendung der Zeitreihe",
             "title": "Beschreibung"
         },
         "bezeichnung": {
@@ -50,56 +47,51 @@
                 }
             ],
             "default": null,
-            "description": "Bezeichnung für die Zeitreihe",
             "title": "Bezeichnung"
         },
         "einheit": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/enum/Mengeneinheit.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/enum/Mengeneinheit.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Alle Werte in der Tabelle haben die Einheit, die hier angegeben ist"
+            "default": null
         },
         "medium": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/enum/Medium.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/enum/Medium.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Medium, das gemessen wurde (z.B. Wasser, Dampf, Strom, Gas)"
+            "default": null
         },
         "messart": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/enum/Messart.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/enum/Messart.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Beschreibt die Art der Messung (z.B. aktueller Wert, mittlerer Wert, maximaler Wert)"
+            "default": null
         },
         "messgroesse": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/enum/Messgroesse.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/enum/Messgroesse.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Beschreibt, was gemessen wurde (z.B. Strom, Spannung, Wirkleistung, Scheinleistung)"
+            "default": null
         },
         "version": {
             "anyOf": [
@@ -111,14 +103,13 @@
                 }
             ],
             "default": null,
-            "description": "Version der Zeitreihe",
             "title": "Version"
         },
         "werte": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/com/Zeitreihenwert.json"
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/com/Zeitreihenwert.json"
                     },
                     "type": "array"
                 },
@@ -127,26 +118,24 @@
                 }
             ],
             "default": null,
-            "description": "Hier liegen jeweils die Werte",
             "title": "Werte"
         },
         "wertherkunft": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/enum/Wertermittlungsverfahren.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/enum/Wertermittlungsverfahren.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Kennzeichnung, wie die Werte entstanden sind, z.B. durch Messung"
+            "default": null
         },
         "zusatzAttribute": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/ZusatzAttribut.json"
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/ZusatzAttribut.json"
                     },
                     "type": "array"
                 },

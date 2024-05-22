@@ -1,6 +1,6 @@
 {
     "additionalProperties": true,
-    "description": "Abbildung einer Menge mit Wert und Einheit.\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/com/Menge.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Menge JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/com/Menge.json>`_",
+    "description": "Contains information to call or fax someone\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/com/Rufnummer.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Rufnummer JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/com/Rufnummer.json>`_",
     "properties": {
         "_id": {
             "anyOf": [
@@ -26,10 +26,10 @@
             "default": "202401.0.1.1",
             "title": " Version"
         },
-        "einheit": {
+        "nummerntyp": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/enum/Mengeneinheit.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/enum/Rufnummernart.json"
                 },
                 {
                     "type": "null"
@@ -37,10 +37,9 @@
             ],
             "default": null
         },
-        "wert": {
+        "rufnummer": {
             "anyOf": [
                 {
-                    "format": "decimal",
                     "type": "string"
                 },
                 {
@@ -48,7 +47,7 @@
                 }
             ],
             "default": null,
-            "title": "Wert"
+            "title": "Rufnummer"
         },
         "zusatzAttribute": {
             "anyOf": [
@@ -66,6 +65,6 @@
             "title": "Zusatzattribute"
         }
     },
-    "title": "Menge",
+    "title": "Rufnummer",
     "type": "object"
 }

@@ -1,6 +1,6 @@
 {
     "additionalProperties": true,
-    "description": "Mit dieser Komponente können Auf- und Abschläge verschiedener Typen\nim Zusammenhang mit regionalen Gültigkeiten abgebildet werden.\nHier sind auch die Auswirkungen auf verschiedene Tarifparameter modelliert,\ndie sich durch die Auswahl eines Auf- oder Abschlags ergeben.\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/com/AufAbschlagRegional.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `AufAbschlagRegional JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/com/AufAbschlagRegional.json>`_",
+    "description": "Mit dieser Komponente können Auf- und Abschläge verschiedener Typen\nim Zusammenhang mit regionalen Gültigkeiten abgebildet werden.\nHier sind auch die Auswirkungen auf verschiedene Tarifparameter modelliert,\ndie sich durch die Auswahl eines Auf- oder Abschlags ergeben.\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/com/AufAbschlagRegional.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `AufAbschlagRegional JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/com/AufAbschlagRegional.json>`_",
     "properties": {
         "_id": {
             "anyOf": [
@@ -12,7 +12,6 @@
                 }
             ],
             "default": null,
-            "description": "zusatz_attribute: Optional[list[\"ZusatzAttribut\"]] = None\n\n# pylint: disable=duplicate-code\nmodel_config = ConfigDict(\n    alias_generator=camelize,\n    populate_by_name=True,\n    extra=\"allow\",\n    # json_encoders is deprecated, but there is no easy-to-use alternative. The best way would be to create\n    # an annotated version of Decimal, but you would have to use it everywhere in the pydantic models.\n    # See this issue for more info: https://github.com/pydantic/pydantic/issues/6375\n    json_encoders={Decimal: str},\n)",
             "title": " Id"
         },
         "_version": {
@@ -24,33 +23,30 @@
                     "type": "null"
                 }
             ],
-            "default": "202401.2.0",
-            "description": "Version der BO-Struktur aka \"fachliche Versionierung\"",
+            "default": "202401.0.1.1",
             "title": " Version"
         },
         "aufAbschlagstyp": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/enum/AufAbschlagstyp.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/enum/AufAbschlagstyp.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Typ des Aufabschlages (z.B. absolut oder prozentual)"
+            "default": null
         },
         "aufAbschlagsziel": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/enum/AufAbschlagsziel.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/enum/AufAbschlagsziel.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Diesem Preis oder den Kosten ist der Auf/Abschlag zugeordnet. Z.B. Arbeitspreis, Gesamtpreis etc."
+            "default": null
         },
         "beschreibung": {
             "anyOf": [
@@ -62,14 +58,13 @@
                 }
             ],
             "default": null,
-            "description": "Beschreibung zum Auf-/Abschlag",
             "title": "Beschreibung"
         },
         "betraege": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/com/AufAbschlagProOrt.json"
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/com/AufAbschlagProOrt.json"
                     },
                     "type": "array"
                 },
@@ -78,7 +73,6 @@
                 }
             ],
             "default": null,
-            "description": "Werte für die gestaffelten Auf/Abschläge mit regionaler Eingrenzung",
             "title": "Betraege"
         },
         "bezeichnung": {
@@ -91,68 +85,62 @@
                 }
             ],
             "default": null,
-            "description": "Bezeichnung des Auf-/Abschlags",
             "title": "Bezeichnung"
         },
         "einheit": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/enum/Waehrungseinheit.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/enum/Waehrungseinheit.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Gibt an in welcher Währungseinheit der Auf/Abschlag berechnet wird. Euro oder Ct."
+            "default": null
         },
         "einschraenkungsaenderung": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/com/Tarifeinschraenkung.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/com/Tarifeinschraenkung.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Änderungen in den Einschränkungen zum Tarif. Falls in dieser Komponenten angegeben,\nwerden die Tarifparameter hiermit überschrieben."
+            "default": null
         },
         "energiemixaenderung": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/com/Energiemix.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/com/Energiemix.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Der Energiemix kann sich durch einen AufAbschlag ändern (z.B. zwei Cent Aufschlag für Ökostrom:\nSollte dies der Fall sein, wird hier die neue Zusammensetzung des Energiemix angegeben."
+            "default": null
         },
         "garantieaenderung": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/com/Preisgarantie.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/com/Preisgarantie.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Änderungen in den Garantievereinbarungen. Falls in dieser Komponenten angegeben,\nwerden die Tarifparameter hiermit überschrieben."
+            "default": null
         },
         "gueltigkeitszeitraum": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/com/Zeitraum.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/com/Zeitraum.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Zeitraum, in dem der Abschlag zur Anwendung kommen kann"
+            "default": null
         },
         "tarifnamensaenderungen": {
             "anyOf": [
@@ -164,20 +152,18 @@
                 }
             ],
             "default": null,
-            "description": "Durch die Anwendung des Auf/Abschlags kann eine Änderung des Tarifnamens auftreten.",
             "title": "Tarifnamensaenderungen"
         },
         "vertagskonditionsaenderung": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/com/Vertragskonditionen.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/com/Vertragskonditionen.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Änderungen in den Vertragskonditionen. Falls in dieser Komponenten angegeben,\nwerden die Tarifparameter hiermit überschrieben."
+            "default": null
         },
         "voraussetzungen": {
             "anyOf": [
@@ -192,7 +178,6 @@
                 }
             ],
             "default": null,
-            "description": "Voraussetzungen, die erfüllt sein müssen, damit dieser AufAbschlag zur Anwendung kommen kann",
             "title": "Voraussetzungen"
         },
         "website": {
@@ -205,14 +190,13 @@
                 }
             ],
             "default": null,
-            "description": "Internetseite, auf der die Informationen zum Auf-/Abschlag veröffentlicht sind",
             "title": "Website"
         },
         "zusatzAttribute": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/ZusatzAttribut.json"
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/ZusatzAttribut.json"
                     },
                     "type": "array"
                 },
@@ -236,7 +220,6 @@
                 }
             ],
             "default": null,
-            "description": "Zusatzprodukte, die nur in Kombination mit diesem AufAbschlag erhältlich sind",
             "title": "Zusatzprodukte"
         }
     },

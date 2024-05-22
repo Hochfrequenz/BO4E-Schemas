@@ -59,9 +59,7 @@
         "WIM",
         "ZAEHLERSTAENDE_SLP",
         "ZAHLUNGSVERKEHR",
-        "ZUORDNUNGSVEREINBARUNG",
-        "EINSPEISUNG",
-        "BEWEGUNGSDATEN"
+        "ZUORDNUNGSVEREINBARUNG"
     ],
     "title": "Themengebiet",
     "type": "string"

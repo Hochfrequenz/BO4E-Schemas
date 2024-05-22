@@ -2,6 +2,7 @@
     "description": "Auflistung sämtlicher existierender Geschäftsobjekte.",
     "enum": [
         "ANGEBOT",
+        "ANSPRECHPARTNER",
         "AUSSCHREIBUNG",
         "BUENDELVERTRAG",
         "ENERGIEMENGE",
@@ -15,7 +16,6 @@
         "MESSLOKATION",
         "MARKTTEILNEHMER",
         "NETZNUTZUNGSRECHNUNG",
-        "PERSON",
         "PREISBLATT",
         "PREISBLATTDIENSTLEISTUNG",
         "PREISBLATTHARDWARE",

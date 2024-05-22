@@ -1,6 +1,6 @@
 {
     "additionalProperties": true,
-    "description": "Object containing information about a Marktlokation\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/Marktlokation.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Marktlokation JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/bo/Marktlokation.json>`_",
+    "description": "Object containing information about a Marktlokation\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/Marktlokation.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Marktlokation JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/bo/Marktlokation.json>`_",
     "properties": {
         "_id": {
             "anyOf": [
@@ -12,20 +12,18 @@
                 }
             ],
             "default": null,
-            "description": "Hier können IDs anderer Systeme hinterlegt werden (z.B. eine SAP-GP-Nummer oder eine GUID)",
             "title": " Id"
         },
         "_typ": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/enum/Typ.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/enum/Typ.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": "MARKTLOKATION",
-            "description": "Identifikationsnummer einer Marktlokation, an der Energie entweder verbraucht, oder erzeugt wird."
+            "default": "MARKTLOKATION"
         },
         "_version": {
             "anyOf": [
@@ -36,8 +34,7 @@
                     "type": "null"
                 }
             ],
-            "default": "202401.2.0",
-            "description": "Version der BO-Struktur aka \"fachliche Versionierung\"",
+            "default": "202401.0.1.1",
             "title": " Version"
         },
         "bilanzierungsgebiet": {
@@ -50,80 +47,73 @@
                 }
             ],
             "default": null,
-            "description": "Bilanzierungsgebiet, dem das Netzgebiet zugeordnet ist - im Falle eines Strom Netzes",
             "title": "Bilanzierungsgebiet"
         },
         "bilanzierungsmethode": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/enum/Bilanzierungsmethode.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/enum/Bilanzierungsmethode.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Die Bilanzierungsmethode, RLM oder SLP"
+            "default": null
         },
         "endkunde": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/bo/Geschaeftspartner.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/bo/Geschaeftspartner.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Geschäftspartner, dem diese Marktlokation gehört"
+            "default": null
         },
         "energierichtung": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/enum/Energierichtung.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/enum/Energierichtung.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Kennzeichnung, ob Energie eingespeist oder entnommen (ausgespeist) wird"
+            "default": null
         },
         "gasqualitaet": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/enum/Gasqualitaet.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/enum/Gasqualitaet.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Die Gasqualität in diesem Netzgebiet. H-Gas oder L-Gas. Im Falle eines Gas-Netzes"
+            "default": null
         },
         "gebietstyp": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/enum/Gebiettyp.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/enum/Gebiettyp.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Typ des Netzgebietes, z.B. Verteilnetz"
+            "default": null
         },
         "geoadresse": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/com/Geokoordinaten.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/com/Geokoordinaten.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "katasterinformation: Optional[\"Katasteradresse\"] = None"
+            "default": null
         },
         "grundversorgercodenr": {
             "anyOf": [
@@ -135,7 +125,6 @@
                 }
             ],
             "default": null,
-            "description": "Codenummer des Grundversorgers, der für diese Marktlokation zuständig ist",
             "title": "Grundversorgercodenr"
         },
         "istUnterbrechbar": {
@@ -148,26 +137,24 @@
                 }
             ],
             "default": null,
-            "description": "Gibt an, ob es sich um eine unterbrechbare Belieferung handelt",
             "title": "Istunterbrechbar"
         },
         "katasterinformation": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/com/Katasteradresse.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/com/Katasteradresse.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Alternativ zu einer postalischen Adresse und Geokoordinaten kann hier eine Ortsangabe mittels Gemarkung und\nFlurstück erfolgen."
+            "default": null
         },
         "kundengruppen": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/enum/Kundentyp.json"
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/enum/Kundentyp.json"
                     },
                     "type": "array"
                 },
@@ -176,33 +163,18 @@
                 }
             ],
             "default": null,
-            "description": "Kundengruppen der Marktlokation",
             "title": "Kundengruppen"
         },
         "lokationsadresse": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/com/Adresse.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/com/Adresse.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Die Adresse, an der die Energie-Lieferung oder -Einspeisung erfolgt"
-        },
-        "marktgebiet": {
-            "anyOf": [
-                {
-                    "type": "string"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "default": null,
-            "description": "für Gas. Code vom EIC, https://www.entsog.eu/data/data-portal/codes-list",
-            "title": "Marktgebiet"
+            "default": null
         },
         "marktlokationsId": {
             "anyOf": [
@@ -214,7 +186,6 @@
                 }
             ],
             "default": null,
-            "description": "Identifikationsnummer einer Marktlokation, an der Energie entweder verbraucht, oder erzeugt wird.",
             "title": "Marktlokationsid"
         },
         "netzbetreibercodenr": {
@@ -227,20 +198,18 @@
                 }
             ],
             "default": null,
-            "description": "Codenummer des Netzbetreibers, an dessen Netz diese Marktlokation angeschlossen ist.",
             "title": "Netzbetreibercodenr"
         },
         "netzebene": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/enum/Netzebene.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/enum/Netzebene.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Netzebene, in der der Bezug der Energie erfolgt.\nBei Strom Spannungsebene der Lieferung, bei Gas Druckstufe.\nBeispiel Strom: Niederspannung Beispiel Gas: Niederdruck."
+            "default": null
         },
         "netzgebietsnr": {
             "anyOf": [
@@ -252,96 +221,34 @@
                 }
             ],
             "default": null,
-            "description": "Die ID des Gebietes in der ene't-Datenbank",
             "title": "Netzgebietsnr"
-        },
-        "regelzone": {
-            "anyOf": [
-                {
-                    "type": "string"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "default": null,
-            "description": "Kundengruppen der Marktlokation",
-            "title": "Regelzone"
         },
         "sparte": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/enum/Sparte.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/enum/Sparte.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Sparte der Marktlokation, z.B. Gas oder Strom"
+            "default": null
         },
         "verbrauchsart": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/enum/Verbrauchsart.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/enum/Verbrauchsart.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Verbrauchsart der Marktlokation."
-        },
-        "verbrauchsmengen": {
-            "anyOf": [
-                {
-                    "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/com/Verbrauch.json"
-                    },
-                    "type": "array"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "default": null,
-            "title": "Verbrauchsmengen"
-        },
-        "zaehlwerke": {
-            "anyOf": [
-                {
-                    "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/com/Zaehlwerk.json"
-                    },
-                    "type": "array"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "default": null,
-            "description": "für Gas. Code vom EIC, https://www.entsog.eu/data/data-portal/codes-list",
-            "title": "Zaehlwerke"
-        },
-        "zaehlwerkeDerBeteiligtenMarktrolle": {
-            "anyOf": [
-                {
-                    "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/com/Zaehlwerk.json"
-                    },
-                    "type": "array"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "default": null,
-            "title": "Zaehlwerkederbeteiligtenmarktrolle"
+            "default": null
         },
         "zugehoerigeMesslokation": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/com/Messlokationszuordnung.json"
+                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/com/Messlokationszuordnung.json"
                 },
                 {
                     "type": "null"
@@ -353,7 +260,7 @@
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/ZusatzAttribut.json"
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/ZusatzAttribut.json"
                     },
                     "type": "array"
                 },

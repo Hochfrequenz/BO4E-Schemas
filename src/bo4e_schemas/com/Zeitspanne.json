@@ -1,6 +1,6 @@
 {
     "additionalProperties": true,
-    "description": "Eine Zeitspanne ist definiert aus Start und/oder Ende.\nDer Unterschied zur Menge (die auch zur Abbildung von Zeitmengen genutzt wird) ist, dass konkrete Start- und Endzeitpunkte angegeben werden.\nDie Zeitspanne ist aus dem COM Zeitraum hervorgegangen, das in Zeitspanne und Menge aufgeteilt wurde.\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/com/Zeitspanne.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Zeitspanne JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/com/Zeitspanne.json>`_",
+    "description": "Eine Zeitspanne ist definiert aus Start und/oder Ende.\nDer Unterschied zur Menge (die auch zur Abbildung von Zeitmengen genutzt wird) ist, dass konkrete Start- und Endzeitpunkte angegeben werden.\nDie Zeitspanne ist aus dem COM Zeitraum hervorgegangen, das in Zeitspanne und Menge aufgeteilt wurde.\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/com/Zeitspanne.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Zeitspanne JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/com/Zeitspanne.json>`_",
     "properties": {
         "_id": {
             "anyOf": [
@@ -12,7 +12,6 @@
                 }
             ],
             "default": null,
-            "description": "zusatz_attribute: Optional[list[\"ZusatzAttribut\"]] = None\n\n# pylint: disable=duplicate-code\nmodel_config = ConfigDict(\n    alias_generator=camelize,\n    populate_by_name=True,\n    extra=\"allow\",\n    # json_encoders is deprecated, but there is no easy-to-use alternative. The best way would be to create\n    # an annotated version of Decimal, but you would have to use it everywhere in the pydantic models.\n    # See this issue for more info: https://github.com/pydantic/pydantic/issues/6375\n    json_encoders={Decimal: str},\n)",
             "title": " Id"
         },
         "_version": {
@@ -24,8 +23,7 @@
                     "type": "null"
                 }
             ],
-            "default": "202401.2.0",
-            "description": "Version der BO-Struktur aka \"fachliche Versionierung\"",
+            "default": "202401.0.1.1",
             "title": " Version"
         },
         "ende": {
@@ -39,7 +37,6 @@
                 }
             ],
             "default": null,
-            "description": "inklusiver Beginn",
             "title": "Ende"
         },
         "start": {
@@ -53,14 +50,13 @@
                 }
             ],
             "default": null,
-            "description": "inklusiver Beginn",
             "title": "Start"
         },
         "zusatzAttribute": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.0/src/bo4e_schemas/ZusatzAttribut.json"
+                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/ZusatzAttribut.json"
                     },
                     "type": "array"
                 },
