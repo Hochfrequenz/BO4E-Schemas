@@ -1,6 +1,6 @@
 {
     "additionalProperties": true,
-    "description": "Die Komponente Ausschreibungsdetail wird verwendet um die Informationen zu einer Abnahmestelle innerhalb eines\nAusschreibungsloses abzubilden.\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/com/Ausschreibungsdetail.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Ausschreibungsdetail JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/com/Ausschreibungsdetail.json>`_",
+    "description": "Die Komponente Ausschreibungsdetail wird verwendet um die Informationen zu einer Abnahmestelle innerhalb eines\nAusschreibungsloses abzubilden.\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/com/Ausschreibungsdetail.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Ausschreibungsdetail JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.1/src/bo4e_schemas/com/Ausschreibungsdetail.json>`_",
     "properties": {
         "_id": {
             "anyOf": [
@@ -12,6 +12,7 @@
                 }
             ],
             "default": null,
+            "description": "zusatz_attribute: Optional[list[\"ZusatzAttribut\"]] = None\n\n# pylint: disable=duplicate-code\nmodel_config = ConfigDict(\n    alias_generator=camelize,\n    populate_by_name=True,\n    extra=\"allow\",\n    # json_encoders is deprecated, but there is no easy-to-use alternative. The best way would be to create\n    # an annotated version of Decimal, but you would have to use it everywhere in the pydantic models.\n    # See this issue for more info: https://github.com/pydantic/pydantic/issues/6375\n    json_encoders={Decimal: str},\n)",
             "title": " Id"
         },
         "_version": {
@@ -23,7 +24,8 @@
                     "type": "null"
                 }
             ],
-            "default": "202401.0.1.1",
+            "default": "202401.2.1",
+            "description": "Version der BO-Struktur aka \"fachliche Versionierung\"",
             "title": " Version"
         },
         "istLastgangVorhanden": {
@@ -36,6 +38,7 @@
                 }
             ],
             "default": null,
+            "description": "Prognosewert für die Jahresarbeit der ausgeschriebenen Lokation",
             "title": "Istlastgangvorhanden"
         },
         "kunde": {
@@ -48,18 +51,20 @@
                 }
             ],
             "default": null,
+            "description": "Bezeichnung des Kunden, der die Marktlokation nutzt",
             "title": "Kunde"
         },
         "lieferzeitraum": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/com/Zeitraum.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.1/src/bo4e_schemas/com/Zeitraum.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "description": "Angefragter Zeitraum für die ausgeschriebene Belieferung"
         },
         "marktlokationsId": {
             "anyOf": [
@@ -71,18 +76,20 @@
                 }
             ],
             "default": null,
+            "description": "Identifikation einer ausgeschriebenen Marktlokation",
             "title": "Marktlokationsid"
         },
         "marktlokationsadresse": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/com/Adresse.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.1/src/bo4e_schemas/com/Adresse.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "description": "Die Adresse an der die Marktlokation sich befindet"
         },
         "marktlokationsbezeichnung": {
             "anyOf": [
@@ -94,6 +101,7 @@
                 }
             ],
             "default": null,
+            "description": "Bezeichnung für die Lokation, z.B. 'Zentraler Einkauf, Hamburg'",
             "title": "Marktlokationsbezeichnung"
         },
         "netzbetreiber": {
@@ -106,6 +114,7 @@
                 }
             ],
             "default": null,
+            "description": "Bezeichnung des zuständigen Netzbetreibers, z.B. 'Stromnetz Hamburg GmbH'",
             "title": "Netzbetreiber"
         },
         "netzebeneLieferung": {
@@ -118,6 +127,7 @@
                 }
             ],
             "default": null,
+            "description": "In der angegebenen Netzebene wird die Marktlokation versorgt, z.B. MSP für Mittelspannung",
             "title": "Netzebenelieferung"
         },
         "netzebeneMessung": {
@@ -130,51 +140,56 @@
                 }
             ],
             "default": null,
+            "description": "In der angegebenen Netzebene wird die Lokation gemessen, z.B. NSP für Niederspannung",
             "title": "Netzebenemessung"
         },
         "prognoseArbeitLieferzeitraum": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/com/Menge.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.1/src/bo4e_schemas/com/Menge.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "description": "Ein Prognosewert für die Arbeit innerhalb des angefragten Lieferzeitraums der ausgeschriebenen Lokation"
         },
         "prognoseJahresarbeit": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/com/Menge.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.1/src/bo4e_schemas/com/Menge.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "description": "Prognosewert für die Jahresarbeit der ausgeschriebenen Lokation"
         },
         "prognoseLeistung": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/com/Menge.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.1/src/bo4e_schemas/com/Menge.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "description": "Prognosewert für die abgenommene maximale Leistung der ausgeschriebenen Lokation"
         },
         "rechnungsadresse": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/com/Adresse.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.1/src/bo4e_schemas/com/Adresse.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "description": "Die (evtl. abweichende) Rechnungsadresse"
         },
         "zaehlernummer": {
             "anyOf": [
@@ -186,24 +201,26 @@
                 }
             ],
             "default": null,
+            "description": "Die Bezeichnung des Zählers an der Marktlokation",
             "title": "Zaehlernummer"
         },
         "zaehlertechnik": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/enum/Zaehlertyp.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.1/src/bo4e_schemas/enum/Zaehlertyp.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null
+            "default": null,
+            "description": "Spezifikation, um welche Zählertechnik es sich im vorliegenden Fall handelt, z.B. Leistungsmessung"
         },
         "zusatzAttribute": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/Hochfrequenz/BO4E-Schemas/v202401.0.1.1/src/bo4e_schemas/ZusatzAttribut.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.1/src/bo4e_schemas/ZusatzAttribut.json"
                     },
                     "type": "array"
                 },
