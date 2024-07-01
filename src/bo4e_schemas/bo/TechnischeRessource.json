@@ -1,6 +1,6 @@
 {
     "additionalProperties": true,
-    "description": "Object containing information about a Messlokation\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/Messlokation.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Messlokation JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v0.1.dev1+g12a6a6c/src/bo4e_schemas/bo/Messlokation.json>`_",
+    "description": "Object containing information about a technische Ressource\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/TechnischeRessource.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `TechnischeRessource JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v0.1.dev1+g12a6a6c/src/bo4e_schemas/bo/TechnischeRessource.json>`_",
     "properties": {
         "_id": {
             "anyOf": [
@@ -24,8 +24,8 @@
                     "type": "null"
                 }
             ],
-            "default": "MESSLOKATION",
-            "description": "Die Messlokations-Identifikation; Das ist die frühere Zählpunktbezeichnung"
+            "default": "TECHNISCHERESSOURCE",
+            "description": "Identifikationsnummer einer technischen Ressource"
         },
         "_version": {
             "anyOf": [
@@ -40,71 +40,29 @@
             "description": "Version der BO-Struktur aka \"fachliche Versionierung\"",
             "title": " Version"
         },
-        "geoadresse": {
+        "emobilitaetsart": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/com/Geokoordinaten.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/enum/EMobilitaetsart.json"
                 },
                 {
                     "type": "null"
                 }
             ],
             "default": null,
-            "description": "katasterinformation: Optional[\"Katasteradresse\"] = None"
+            "description": "Art der E-Mobilität"
         },
-        "geraete": {
+        "erzeugungsart": {
             "anyOf": [
                 {
-                    "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/bo/Geraet.json"
-                    },
-                    "type": "array"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/enum/Erzeugungsart.json"
                 },
                 {
                     "type": "null"
                 }
             ],
             "default": null,
-            "description": "Liste der Geräte, die zu dieser Messstelle gehört",
-            "title": "Geraete"
-        },
-        "grundzustaendigerMsbCodenr": {
-            "anyOf": [
-                {
-                    "type": "string"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "default": null,
-            "description": "grundzustaendiger_msbim_codenr: Optional[str] = None",
-            "title": "Grundzustaendigermsbcodenr"
-        },
-        "grundzustaendigerMsbimCodenr": {
-            "anyOf": [
-                {
-                    "type": "string"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "default": null,
-            "description": "# only one of the following three optional address attributes can be set\nmessadresse: Optional[\"Adresse\"] = None",
-            "title": "Grundzustaendigermsbimcodenr"
-        },
-        "katasterinformation": {
-            "anyOf": [
-                {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/com/Katasteradresse.json"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "default": null,
-            "description": "Lokationszuordnung, um bspw. die zugehörigen Marktlokationen anzugeben"
+            "description": "Art der Erzeugung der Energie"
         },
         "lokationsbuendelObjektcode": {
             "anyOf": [
@@ -132,38 +90,58 @@
                 }
             ],
             "default": null,
-            "description": "Lokationszuordnung, um bspw. die zugehörigen Marktlokationen anzugeben",
+            "description": "Lokationszuordnung, um bspw. die zugehörigen Messlokationen anzugeben",
             "title": "Lokationszuordnungen"
         },
-        "messadresse": {
+        "nennleistungabgabe": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/com/Adresse.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/com/Menge.json"
                 },
                 {
                     "type": "null"
                 }
             ],
             "default": null,
-            "description": "geoadresse: Optional[\"Geokoordinaten\"] = None"
+            "description": "Nennleistung (Abgabe)"
         },
-        "messdienstleistung": {
+        "nennleistungaufnahme": {
             "anyOf": [
                 {
-                    "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/com/Dienstleistung.json"
-                    },
-                    "type": "array"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/com/Menge.json"
                 },
                 {
                     "type": "null"
                 }
             ],
             "default": null,
-            "description": "Liste der Messdienstleistungen, die zu dieser Messstelle gehört",
-            "title": "Messdienstleistung"
+            "description": "Nennleistung (Aufnahme)"
         },
-        "messgebietnr": {
+        "speicherart": {
+            "anyOf": [
+                {
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/enum/Speicherart.json"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Art des Speichers"
+        },
+        "speicherkapazitaet": {
+            "anyOf": [
+                {
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/com/Menge.json"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Speicherkapazität"
+        },
+        "technischeRessourceId": {
             "anyOf": [
                 {
                     "type": "string"
@@ -173,10 +151,34 @@
                 }
             ],
             "default": null,
-            "description": "Die Nummer des Messgebietes in der ene't-Datenbank",
-            "title": "Messgebietnr"
+            "description": "Identifikationsnummer einer technischen Ressource",
+            "title": "Technischeressourceid"
         },
-        "messlokationsId": {
+        "technischeRessourceNutzung": {
+            "anyOf": [
+                {
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/enum/TechnischeRessourceNutzung.json"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Art und Nutzung der technischen Ressource"
+        },
+        "technischeRessourceVerbrauchsart": {
+            "anyOf": [
+                {
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/enum/TechnischeRessourceVerbrauchsart.json"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Verbrauchsart der technischen Ressource"
+        },
+        "vorgelagerteMesslokationId": {
             "anyOf": [
                 {
                     "type": "string"
@@ -186,48 +188,46 @@
                 }
             ],
             "default": null,
-            "description": "Die Messlokations-Identifikation; Das ist die frühere Zählpunktbezeichnung",
-            "title": "Messlokationsid"
+            "description": "Vorgelagerte Messlokation ID",
+            "title": "Vorgelagertemesslokationid"
         },
-        "messlokationszaehler": {
+        "waermenutzung": {
             "anyOf": [
                 {
-                    "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/bo/Zaehler.json"
-                    },
-                    "type": "array"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/enum/Waermenutzung.json"
                 },
                 {
                     "type": "null"
                 }
             ],
             "default": null,
-            "description": "Zähler, die zu dieser Messlokation gehören",
-            "title": "Messlokationszaehler"
+            "description": "Wärmenutzung"
         },
-        "netzebeneMessung": {
+        "zugeordneteMarktlokationId": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/enum/Netzebene.json"
+                    "type": "string"
                 },
                 {
                     "type": "null"
                 }
             ],
             "default": null,
-            "description": "Spannungsebene der Messung"
+            "description": "Referenz auf die der technischen Ressource zugeordneten Marktlokation",
+            "title": "Zugeordnetemarktlokationid"
         },
-        "sparte": {
+        "zugeordneteSteuerbareRessourceId": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/enum/Sparte.json"
+                    "type": "string"
                 },
                 {
                     "type": "null"
                 }
             ],
             "default": null,
-            "description": "Sparte der Messlokation, z.B. Gas oder Strom"
+            "description": "Referenz auf die der technischen Ressource zugeordneten Steuerbaren Ressource",
+            "title": "Zugeordnetesteuerbareressourceid"
         },
         "zusatzAttribute": {
             "anyOf": [
@@ -245,6 +245,6 @@
             "title": "Zusatzattribute"
         }
     },
-    "title": "Messlokation",
+    "title": "TechnischeRessource",
     "type": "object"
 }

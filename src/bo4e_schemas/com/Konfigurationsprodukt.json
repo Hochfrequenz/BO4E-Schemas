@@ -1,6 +1,6 @@
 {
     "additionalProperties": true,
-    "description": "Mit dieser Komponente werden Messlokationen zu Marktlokationen zugeordnet.\nDabei kann eine arithmetische Operation (Addition, Subtraktion, Multiplikation, Division) angegeben werden,\nmit der die Messlokation zum Verbrauch der Marktlokation beiträgt.\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/com/Messlokationszuordnung.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Messlokationszuordnung JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.1/src/bo4e_schemas/com/Messlokationszuordnung.json>`_",
+    "description": "Object containing information about a Konfigurationsprodukt\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/Konfigurationsprodukt.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Konfigurationsprodukt JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v0.1.dev1+g12a6a6c/src/bo4e_schemas/bo/Konfigurationsprodukt.json>`_",
     "properties": {
         "_id": {
             "anyOf": [
@@ -24,14 +24,26 @@
                     "type": "null"
                 }
             ],
-            "default": "202401.2.1",
+            "default": "0.1.dev1+g12a6a6c",
             "description": "Version der BO-Struktur aka \"fachliche Versionierung\"",
             "title": " Version"
         },
-        "arithmetik": {
+        "leistungskurvendefinition": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.1/src/bo4e_schemas/enum/ArithmetischeOperation.json"
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "title": "Leistungskurvendefinition"
+        },
+        "marktpartner": {
+            "anyOf": [
+                {
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/bo/Marktteilnehmer.json"
                 },
                 {
                     "type": "null"
@@ -39,10 +51,9 @@
             ],
             "default": null
         },
-        "gueltigBis": {
+        "produktcode": {
             "anyOf": [
                 {
-                    "format": "date-time",
                     "type": "string"
                 },
                 {
@@ -50,24 +61,9 @@
                 }
             ],
             "default": null,
-            "description": "exklusives Endedatum",
-            "title": "Gueltigbis"
+            "title": "Produktcode"
         },
-        "gueltigSeit": {
-            "anyOf": [
-                {
-                    "format": "date-time",
-                    "type": "string"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "default": null,
-            "description": "gueltig_bis: Optional[pydantic.AwareDatetime] = None",
-            "title": "Gueltigseit"
-        },
-        "messlokationsId": {
+        "schaltzeitdefinition": {
             "anyOf": [
                 {
                     "type": "string"
@@ -77,14 +73,13 @@
                 }
             ],
             "default": null,
-            "description": "arithmetik: Optional[\"ArithmetischeOperation\"] = None\n\ngueltig_seit: Optional[pydantic.AwareDatetime] = None",
-            "title": "Messlokationsid"
+            "title": "Schaltzeitdefinition"
         },
         "zusatzAttribute": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.2.1/src/bo4e_schemas/ZusatzAttribut.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/ZusatzAttribut.json"
                     },
                     "type": "array"
                 },
@@ -96,6 +91,6 @@
             "title": "Zusatzattribute"
         }
     },
-    "title": "Messlokationszuordnung",
+    "title": "Konfigurationsprodukt",
     "type": "object"
 }

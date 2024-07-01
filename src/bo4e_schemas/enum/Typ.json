@@ -13,8 +13,11 @@
         "LASTGANG",
         "MARKTLOKATION",
         "MESSLOKATION",
+        "NETZLOKATION",
         "MARKTTEILNEHMER",
         "NETZNUTZUNGSRECHNUNG",
+        "TECHNISCHERESSOURCE",
+        "STEUERBARERESSOURCE",
         "PERSON",
         "PREISBLATT",
         "PREISBLATTDIENSTLEISTUNG",
@@ -33,7 +36,8 @@
         "TARIFPREISBLATT",
         "VERTRAG",
         "ZAEHLER",
-        "ZEITREIHE"
+        "ZEITREIHE",
+        "LOKATIONSZUORDNUNG"
     ],
     "title": "Typ",
     "type": "string"

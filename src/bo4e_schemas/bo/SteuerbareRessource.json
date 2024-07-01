@@ -1,6 +1,6 @@
 {
     "additionalProperties": true,
-    "description": "Modell zur Abbildung eines Lastganges;\nIn diesem Modell werden die Messwerte mit einem vollständigen Zeitintervall (zeit_intervall_laenge) angegeben und es bietet daher eine hohe Flexibilität in der Übertragung jeglicher zeitlich veränderlicher Messgrössen.\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/Lastgang.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Lastgang JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v0.1.dev1+g12a6a6c/src/bo4e_schemas/bo/Lastgang.json>`_",
+    "description": "Object containing information about a steuerbare Ressource\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/SteuerbareRessource.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `SteuerbareRessource JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v0.1.dev1+g12a6a6c/src/bo4e_schemas/bo/SteuerbareRessource.json>`_",
     "properties": {
         "_id": {
             "anyOf": [
@@ -24,46 +24,10 @@
                     "type": "null"
                 }
             ],
-            "default": "LASTGANG",
-            "description": "Angabe, ob es sich um einen Gas- oder Stromlastgang handelt"
+            "default": "STEUERBARERESSOURCE",
+            "description": "Id der steuerbaren Ressource"
         },
-        "marktlokation": {
-            "anyOf": [
-                {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/bo/Marktlokation.json"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "default": null,
-            "description": "Marktlokation, zu der der Lastgang gehört"
-        },
-        "messgroesse": {
-            "anyOf": [
-                {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/enum/Mengeneinheit.json"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "default": null,
-            "description": "Definition der gemessenen Größe anhand ihrer Einheit"
-        },
-        "messlokation": {
-            "anyOf": [
-                {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/bo/Messlokation.json"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "default": null,
-            "description": "Marktlokation, zu der der Lastgang gehört"
-        },
-        "obisKennzahl": {
+        "_version": {
             "anyOf": [
                 {
                     "type": "string"
@@ -72,40 +36,27 @@
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "Die OBIS-Kennzahl für den Wert, die festlegt, welche Größe mit dem Stand gemeldet wird, z.B. '1-0:1.8.1'",
-            "title": "Obiskennzahl"
+            "default": "0.1.dev1+g12a6a6c",
+            "description": "Version der BO-Struktur aka \"fachliche Versionierung\"",
+            "title": " Version"
         },
-        "sparte": {
+        "eigenschaftMsbLokation": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/enum/Sparte.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/enum/Marktrolle.json"
                 },
                 {
                     "type": "null"
                 }
             ],
             "default": null,
-            "description": "Angabe, ob es sich um einen Gas- oder Stromlastgang handelt"
+            "description": "Eigenschaft des Messstellenbetreibers an der Lokation"
         },
-        "version": {
-            "anyOf": [
-                {
-                    "type": "string"
-                },
-                {
-                    "type": "null"
-                }
-            ],
-            "default": null,
-            "description": "Versionsnummer des Lastgangs",
-            "title": "Version"
-        },
-        "werte": {
+        "konfigurationsprodukte": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/com/Zeitreihenwert.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/com/Konfigurationsprodukt.json"
                     },
                     "type": "array"
                 },
@@ -114,18 +65,75 @@
                 }
             ],
             "default": null,
-            "description": "Die im Lastgang enthaltenen Messwerte",
-            "title": "Werte"
+            "description": "Produkt-Daten der Steuerbaren Ressource",
+            "title": "Konfigurationsprodukte"
         },
-        "zeitIntervallLaenge": {
+        "lokationsbuendelObjektcode": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/com/Menge.json"
+                    "type": "string"
                 },
                 {
                     "type": "null"
                 }
-            ]
+            ],
+            "default": null,
+            "description": "Lokationsbuendel Code, der die Funktion dieses BOs an der Lokationsbuendelstruktur beschreibt.",
+            "title": "Lokationsbuendelobjektcode"
+        },
+        "lokationszuordnungen": {
+            "anyOf": [
+                {
+                    "items": {
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/bo/Lokationszuordnung.json"
+                    },
+                    "type": "array"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Lokationszuordnung, um bspw. die zugehörigen Messlokationen anzugeben",
+            "title": "Lokationszuordnungen"
+        },
+        "steuerbareRessourceId": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Id der steuerbaren Ressource",
+            "title": "Steuerbareressourceid"
+        },
+        "steuerkanalLeistungsbeschreibung": {
+            "anyOf": [
+                {
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/enum/SteuerkanalLeistungsbeschreibung.json"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Leistungsbeschreibung des Steuerkanals"
+        },
+        "zugeordneteMsbCodenummer": {
+            "anyOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "null"
+                }
+            ],
+            "default": null,
+            "description": "Angabe des Messstellenbetreibers, der der Steuerbaren Ressource zugeordnet ist.",
+            "title": "Zugeordnetemsbcodenummer"
         },
         "zusatzAttribute": {
             "anyOf": [
@@ -143,9 +151,6 @@
             "title": "Zusatzattribute"
         }
     },
-    "required": [
-        "zeitIntervallLaenge"
-    ],
-    "title": "Lastgang",
+    "title": "SteuerbareRessource",
     "type": "object"
 }
