@@ -1,6 +1,6 @@
 {
     "additionalProperties": true,
-    "description": "Tarifinformation mit Preisen, Aufschlägen und Berechnungssystematik\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/Tarifpreisblatt.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Tarifpreisblatt JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v0.1.dev1+g12a6a6c/src/bo4e_schemas/bo/Tarifpreisblatt.json>`_",
+    "description": "Tarifinformation mit Preisen, Aufschlägen und Berechnungssystematik\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/Tarifpreisblatt.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Tarifpreisblatt JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/bo/Tarifpreisblatt.json>`_",
     "properties": {
         "_id": {
             "anyOf": [
@@ -18,7 +18,7 @@
         "_typ": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/enum/Typ.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/enum/Typ.json"
                 },
                 {
                     "type": "null"
@@ -36,14 +36,14 @@
                     "type": "null"
                 }
             ],
-            "default": "0.1.dev1+g12a6a6c",
+            "default": "202401.3.1",
             "description": "Version der BO-Struktur aka \"fachliche Versionierung\"",
             "title": " Version"
         },
         "anbieter": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/bo/Marktteilnehmer.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/bo/Marktteilnehmer.json"
                 },
                 {
                     "type": "null"
@@ -76,7 +76,6 @@
                 }
             ],
             "default": null,
-            "description": "Angabe des inklusiven Zeitpunkts, ab dem der Tarif bzw. der Preis angewendet und abgerechnet wird,\nz.B. \"2021-07-20T18:31:48Z\"",
             "title": "Anwendungvon"
         },
         "bemerkung": {
@@ -95,7 +94,7 @@
         "berechnungsparameter": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/com/Tarifberechnungsparameter.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/com/Tarifberechnungsparameter.json"
                 },
                 {
                     "type": "null"
@@ -120,7 +119,7 @@
         "energiemix": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/com/Energiemix.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/com/Energiemix.json"
                 },
                 {
                     "type": "null"
@@ -133,7 +132,7 @@
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/enum/Kundentyp.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/enum/Kundentyp.json"
                     },
                     "type": "array"
                 },
@@ -148,7 +147,7 @@
         "preisgarantie": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/com/Preisgarantie.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/com/Preisgarantie.json"
                 },
                 {
                     "type": "null"
@@ -174,7 +173,7 @@
         "registeranzahl": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/enum/Registeranzahl.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/enum/Registeranzahl.json"
                 },
                 {
                     "type": "null"
@@ -186,7 +185,7 @@
         "sparte": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/enum/Sparte.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/enum/Sparte.json"
                 },
                 {
                     "type": "null"
@@ -199,7 +198,7 @@
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/com/AufAbschlag.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/com/AufAbschlag.json"
                     },
                     "type": "array"
                 },
@@ -214,7 +213,7 @@
         "tarifeinschraenkung": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/com/Tarifeinschraenkung.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/com/Tarifeinschraenkung.json"
                 },
                 {
                     "type": "null"
@@ -227,7 +226,7 @@
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/enum/Tarifmerkmal.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/enum/Tarifmerkmal.json"
                     },
                     "type": "array"
                 },
@@ -243,7 +242,7 @@
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/com/Tarifpreisposition.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/com/Tarifpreisposition.json"
                     },
                     "type": "array"
                 },
@@ -258,7 +257,7 @@
         "tariftyp": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/enum/Tariftyp.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/enum/Tariftyp.json"
                 },
                 {
                     "type": "null"
@@ -270,7 +269,7 @@
         "vertragskonditionen": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/com/Vertragskonditionen.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/com/Vertragskonditionen.json"
                 },
                 {
                     "type": "null"
@@ -295,7 +294,7 @@
         "zeitlicheGueltigkeit": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/com/Zeitraum.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/com/Zeitraum.json"
                 },
                 {
                     "type": "null"
@@ -308,7 +307,7 @@
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/ZusatzAttribut.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/ZusatzAttribut.json"
                     },
                     "type": "array"
                 },

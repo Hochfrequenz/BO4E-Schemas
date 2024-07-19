@@ -1,6 +1,6 @@
 {
     "additionalProperties": true,
-    "description": "Das BO Ausschreibung dient zur detaillierten Darstellung von ausgeschriebenen Energiemengen in der Energiewirtschaft\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/Ausschreibung.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Ausschreibung JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v0.1.dev1+g12a6a6c/src/bo4e_schemas/bo/Ausschreibung.json>`_",
+    "description": "Das BO Ausschreibung dient zur detaillierten Darstellung von ausgeschriebenen Energiemengen in der Energiewirtschaft\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/Ausschreibung.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Ausschreibung JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/bo/Ausschreibung.json>`_",
     "properties": {
         "_id": {
             "anyOf": [
@@ -18,7 +18,7 @@
         "_typ": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/enum/Typ.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/enum/Typ.json"
                 },
                 {
                     "type": "null"
@@ -36,38 +36,36 @@
                     "type": "null"
                 }
             ],
-            "default": "0.1.dev1+g12a6a6c",
+            "default": "202401.3.1",
             "description": "Version der BO-Struktur aka \"fachliche Versionierung\"",
             "title": " Version"
         },
         "abgabefrist": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/com/Zeitraum.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/com/Zeitraum.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "bindefrist: Optional[\"Zeitraum\"] = None"
+            "default": null
         },
         "ausschreibender": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/bo/Geschaeftspartner.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/bo/Geschaeftspartner.json"
                 },
                 {
                     "type": "null"
                 }
             ],
-            "default": null,
-            "description": "abgabefrist: Optional[\"Zeitraum\"] = None"
+            "default": null
         },
         "ausschreibungportal": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/enum/Ausschreibungsportal.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/enum/Ausschreibungsportal.json"
                 },
                 {
                     "type": "null"
@@ -92,7 +90,7 @@
         "ausschreibungsstatus": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/enum/Ausschreibungsstatus.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/enum/Ausschreibungsstatus.json"
                 },
                 {
                     "type": "null"
@@ -104,7 +102,7 @@
         "ausschreibungstyp": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/enum/Ausschreibungstyp.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/enum/Ausschreibungstyp.json"
                 },
                 {
                     "type": "null"
@@ -116,7 +114,7 @@
         "bindefrist": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/com/Zeitraum.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/com/Zeitraum.json"
                 },
                 {
                     "type": "null"
@@ -142,7 +140,7 @@
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/com/Ausschreibungslos.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/com/Ausschreibungslos.json"
                     },
                     "type": "array"
                 },
@@ -185,7 +183,7 @@
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/ZusatzAttribut.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/ZusatzAttribut.json"
                     },
                     "type": "array"
                 },

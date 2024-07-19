@@ -1,6 +1,6 @@
 {
     "additionalProperties": true,
-    "description": "Mit diesem BO kann ein Versorgungsangebot zur Strom- oder Gasversorgung oder die Teilnahme an einer Ausschreibung\nübertragen werden. Es können verschiedene Varianten enthalten sein (z.B. ein- und mehrjährige Laufzeit).\nInnerhalb jeder Variante können Teile enthalten sein, die jeweils für eine oder mehrere Marktlokationen erstellt\nwerden.\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/Angebot.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Angebot JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v0.1.dev1+g12a6a6c/src/bo4e_schemas/bo/Angebot.json>`_",
+    "description": "Mit diesem BO kann ein Versorgungsangebot zur Strom- oder Gasversorgung oder die Teilnahme an einer Ausschreibung\nübertragen werden. Es können verschiedene Varianten enthalten sein (z.B. ein- und mehrjährige Laufzeit).\nInnerhalb jeder Variante können Teile enthalten sein, die jeweils für eine oder mehrere Marktlokationen erstellt\nwerden.\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/bo/Angebot.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Angebot JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/bo/Angebot.json>`_",
     "properties": {
         "_id": {
             "anyOf": [
@@ -18,7 +18,7 @@
         "_typ": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/enum/Typ.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/enum/Typ.json"
                 },
                 {
                     "type": "null"
@@ -36,7 +36,7 @@
                     "type": "null"
                 }
             ],
-            "default": "0.1.dev1+g12a6a6c",
+            "default": "202401.3.1",
             "description": "Version der BO-Struktur aka \"fachliche Versionierung\"",
             "title": " Version"
         },
@@ -70,7 +70,7 @@
         "angebotsgeber": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/bo/Geschaeftspartner.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/bo/Geschaeftspartner.json"
                 },
                 {
                     "type": "null"
@@ -82,7 +82,7 @@
         "angebotsnehmer": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/bo/Geschaeftspartner.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/bo/Geschaeftspartner.json"
                 },
                 {
                     "type": "null"
@@ -121,7 +121,7 @@
         "sparte": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/enum/Sparte.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/enum/Sparte.json"
                 },
                 {
                     "type": "null"
@@ -133,7 +133,7 @@
         "unterzeichnerAngebotsgeber": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/bo/Person.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/bo/Person.json"
                 },
                 {
                     "type": "null"
@@ -145,7 +145,7 @@
         "unterzeichnerAngebotsnehmer": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/bo/Person.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/bo/Person.json"
                 },
                 {
                     "type": "null"
@@ -158,7 +158,7 @@
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/com/Angebotsvariante.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/com/Angebotsvariante.json"
                     },
                     "type": "array"
                 },
@@ -167,14 +167,13 @@
                 }
             ],
             "default": null,
-            "description": "Eine oder mehrere Varianten des Angebots mit den Angebotsteilen;\nEin Angebot besteht mindestens aus einer Variante.",
             "title": "Varianten"
         },
         "zusatzAttribute": {
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/ZusatzAttribut.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/ZusatzAttribut.json"
                     },
                     "type": "array"
                 },

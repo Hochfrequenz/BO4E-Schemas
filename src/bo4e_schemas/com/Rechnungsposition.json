@@ -1,6 +1,6 @@
 {
     "additionalProperties": true,
-    "description": "Über Rechnungspositionen werden Rechnungen strukturiert.\nIn einem Rechnungsteil wird jeweils eine in sich geschlossene Leistung abgerechnet.\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/com/Rechnungsposition.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Rechnungsposition JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v0.1.dev1+g12a6a6c/src/bo4e_schemas/com/Rechnungsposition.json>`_",
+    "description": "Über Rechnungspositionen werden Rechnungen strukturiert.\nIn einem Rechnungsteil wird jeweils eine in sich geschlossene Leistung abgerechnet.\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/com/Rechnungsposition.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Rechnungsposition JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/com/Rechnungsposition.json>`_",
     "properties": {
         "_id": {
             "anyOf": [
@@ -12,7 +12,7 @@
                 }
             ],
             "default": null,
-            "description": "zusatz_attribute: Optional[list[\"ZusatzAttribut\"]] = None\n\n# pylint: disable=duplicate-code\nmodel_config = ConfigDict(\n    alias_generator=camelize,\n    populate_by_name=True,\n    extra=\"allow\",\n    # json_encoders is deprecated, but there is no easy-to-use alternative. The best way would be to create\n    # an annotated version of Decimal, but you would have to use it everywhere in the pydantic models.\n    # See this issue for more info: https://github.com/pydantic/pydantic/issues/6375\n    json_encoders={Decimal: str},\n)",
+            "description": "Eine generische ID, die für eigene Zwecke genutzt werden kann.\nZ.B. könnten hier UUIDs aus einer Datenbank stehen oder URLs zu einem Backend-System.",
             "title": " Id"
         },
         "_version": {
@@ -24,7 +24,7 @@
                     "type": "null"
                 }
             ],
-            "default": "0.1.dev1+g12a6a6c",
+            "default": "202401.3.1",
             "description": "Version der BO-Struktur aka \"fachliche Versionierung\"",
             "title": " Version"
         },
@@ -44,7 +44,7 @@
         "artikelnummer": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/enum/BDEWArtikelnummer.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/enum/BDEWArtikelnummer.json"
                 },
                 {
                     "type": "null"
@@ -56,7 +56,7 @@
         "einzelpreis": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/com/Preis.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/com/Preis.json"
                 },
                 {
                     "type": "null"
@@ -109,7 +109,7 @@
         "positionsMenge": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/com/Menge.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/com/Menge.json"
                 },
                 {
                     "type": "null"
@@ -147,7 +147,7 @@
         "teilrabattNetto": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/com/Betrag.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/com/Betrag.json"
                 },
                 {
                     "type": "null"
@@ -159,19 +159,19 @@
         "teilsummeNetto": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/com/Betrag.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/com/Betrag.json"
                 },
                 {
                     "type": "null"
                 }
             ],
             "default": null,
-            "description": "# the cross check in general doesn't work because Betrag and Preis use different enums to describe the currency\n# see https://github.com/Hochfrequenz/BO4E-python/issues/126\n\n#: Auf die Position entfallende Steuer, bestehend aus Steuersatz und Betrag\nteilsumme_steuer: Optional[\"Steuerbetrag\"] = None\n\n#: Falls sich der Preis auf eine Zeit bezieht, steht hier die Einheit\nzeiteinheit: Optional[\"Mengeneinheit\"] = None\n\n#: Kennzeichnung der Rechnungsposition mit der Standard-Artikelnummer des BDEW\nartikelnummer: Optional[\"BDEWArtikelnummer\"] = None\n#: Marktlokation, die zu dieser Position gehört\nlokations_id: Optional[str] = None\n\nzeitbezogene_menge: Optional[\"Menge\"] = None"
+            "description": "Das Ergebnis der Multiplikation aus einzelpreis * positionsMenge * (Faktor aus zeitbezogeneMenge).\nZ.B. 12,60€ * 120 kW * 3/12 (für 3 Monate)."
         },
         "teilsummeSteuer": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/com/Steuerbetrag.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/com/Steuerbetrag.json"
                 },
                 {
                     "type": "null"
@@ -183,19 +183,19 @@
         "zeitbezogeneMenge": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/com/Menge.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/com/Menge.json"
                 },
                 {
                     "type": "null"
                 }
             ],
             "default": null,
-            "description": "Nettobetrag für den Rabatt dieser Position"
+            "description": "Eine auf die Zeiteinheit bezogene Untermenge.\nZ.B. bei einem Jahrespreis, 3 Monate oder 146 Tage.\nBasierend darauf wird der Preis aufgeteilt."
         },
         "zeiteinheit": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/enum/Mengeneinheit.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/enum/Mengeneinheit.json"
                 },
                 {
                     "type": "null"
@@ -208,7 +208,7 @@
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/ZusatzAttribut.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/ZusatzAttribut.json"
                     },
                     "type": "array"
                 },

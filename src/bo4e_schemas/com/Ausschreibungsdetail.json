@@ -1,6 +1,6 @@
 {
     "additionalProperties": true,
-    "description": "Die Komponente Ausschreibungsdetail wird verwendet um die Informationen zu einer Abnahmestelle innerhalb eines\nAusschreibungsloses abzubilden.\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/com/Ausschreibungsdetail.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Ausschreibungsdetail JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v0.1.dev1+g12a6a6c/src/bo4e_schemas/com/Ausschreibungsdetail.json>`_",
+    "description": "Die Komponente Ausschreibungsdetail wird verwendet um die Informationen zu einer Abnahmestelle innerhalb eines\nAusschreibungsloses abzubilden.\n\n.. raw:: html\n\n    <object data=\"../_static/images/bo4e/com/Ausschreibungsdetail.svg\" type=\"image/svg+xml\"></object>\n\n.. HINT::\n    `Ausschreibungsdetail JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/com/Ausschreibungsdetail.json>`_",
     "properties": {
         "_id": {
             "anyOf": [
@@ -12,7 +12,7 @@
                 }
             ],
             "default": null,
-            "description": "zusatz_attribute: Optional[list[\"ZusatzAttribut\"]] = None\n\n# pylint: disable=duplicate-code\nmodel_config = ConfigDict(\n    alias_generator=camelize,\n    populate_by_name=True,\n    extra=\"allow\",\n    # json_encoders is deprecated, but there is no easy-to-use alternative. The best way would be to create\n    # an annotated version of Decimal, but you would have to use it everywhere in the pydantic models.\n    # See this issue for more info: https://github.com/pydantic/pydantic/issues/6375\n    json_encoders={Decimal: str},\n)",
+            "description": "Eine generische ID, die für eigene Zwecke genutzt werden kann.\nZ.B. könnten hier UUIDs aus einer Datenbank stehen oder URLs zu einem Backend-System.",
             "title": " Id"
         },
         "_version": {
@@ -24,7 +24,7 @@
                     "type": "null"
                 }
             ],
-            "default": "0.1.dev1+g12a6a6c",
+            "default": "202401.3.1",
             "description": "Version der BO-Struktur aka \"fachliche Versionierung\"",
             "title": " Version"
         },
@@ -38,7 +38,7 @@
                 }
             ],
             "default": null,
-            "description": "Prognosewert für die Jahresarbeit der ausgeschriebenen Lokation",
+            "description": "Zeigt an, ob es zu der Marktlokation einen Lastgang gibt.\nFalls ja, kann dieser abgerufen werden und daraus die Verbrauchswerte ermittelt werden",
             "title": "Istlastgangvorhanden"
         },
         "kunde": {
@@ -57,7 +57,7 @@
         "lieferzeitraum": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/com/Zeitraum.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/com/Zeitraum.json"
                 },
                 {
                     "type": "null"
@@ -82,7 +82,7 @@
         "marktlokationsadresse": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/com/Adresse.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/com/Adresse.json"
                 },
                 {
                     "type": "null"
@@ -146,7 +146,7 @@
         "prognoseArbeitLieferzeitraum": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/com/Menge.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/com/Menge.json"
                 },
                 {
                     "type": "null"
@@ -158,7 +158,7 @@
         "prognoseJahresarbeit": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/com/Menge.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/com/Menge.json"
                 },
                 {
                     "type": "null"
@@ -170,7 +170,7 @@
         "prognoseLeistung": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/com/Menge.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/com/Menge.json"
                 },
                 {
                     "type": "null"
@@ -182,7 +182,7 @@
         "rechnungsadresse": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/com/Adresse.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/com/Adresse.json"
                 },
                 {
                     "type": "null"
@@ -207,7 +207,7 @@
         "zaehlertechnik": {
             "anyOf": [
                 {
-                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/enum/Zaehlertyp.json"
+                    "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/enum/Zaehlertyp.json"
                 },
                 {
                     "type": "null"
@@ -220,7 +220,7 @@
             "anyOf": [
                 {
                     "items": {
-                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/main/src/bo4e_schemas/ZusatzAttribut.json"
+                        "$ref": "https://raw.githubusercontent.com/BO4E/BO4E-Schemas/v202401.3.1/src/bo4e_schemas/ZusatzAttribut.json"
                     },
                     "type": "array"
                 },
